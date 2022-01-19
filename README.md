@@ -1,10 +1,16 @@
 # Vehicle-Identification
 ## Overview
 
-Welcome to **Ctrl Alt Defeat's** GitHub Machine Learning project page. This is our final team project for the UNC Chapel Hill Data Analytics course. (feel free to edit/suggest/remove this section as you see fit)
+Welcome to **Ctrl Alt Defeat's** GitHub Machine Learning project page. This is our final team project for the **UNC Chapel Hill Data Analytics Course**. (feel free to edit/suggest/remove this section as you see fit)
 
+### *Communication Protocols*
 
-
+| Team Members	|
+| ------------	|
+| Harsh Patel	|           	
+| Jill Hughes	|
+| Logan Murphy	|
+| Mihai Anghel	|
 
 ___
 ### **Selected Topic**
