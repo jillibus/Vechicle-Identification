@@ -5,17 +5,22 @@ Welcome to **Ctrl Alt Defeat's** GitHub Machine Learning project page.
 
 This is our final team project for the **UNC Chapel Hill Data Analytics Course**. (feel free to edit/suggest/remove this section as you see fit)
 
-### *Communication Protocols*
+### **Communication Protocols**
 
-	|	Team Name	| Team Members	|
-	| ---------------------	| -------------	|
-	|			| Harsh Patel	|           	
-	|   *CTRL ALT DEFEAT*	| Jill Hughes	|
-	|			| Logan Murphy	|
-	|			| Mihai Anghel	|
+**Team Name:** Ctrl Alt Defeat
 
-Team will regularly use Slack for update communiations There is a team Slack for regular updates. We meet twice a week after class and once more for final updates.
-Emergency contact will be by phone, numbers shared in Slack.
+| `Team Members`|
+|:-------------:|
+| Harsh Patel	|           	
+| Jill Hughes	|
+| Logan Murphy	|
+| Mihai Anghel	|
+
+The team will regularly use **Slack** for update communiations and sharing of links/files. 
+
+We will meet twice a week after class and once more during the weekend for final updates. 
+
+Any project emergency communication will be via phone. 
 ___
 ### **Selected Topic**
 
@@ -67,4 +72,4 @@ In addition to using a Flask template, we will also integrate D3.js for a fully 
 ## Results
 
 ## Summary
-I hope this works. Testing from Mihai's branch
+We are able to commit now yay!
