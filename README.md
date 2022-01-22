@@ -33,11 +33,13 @@ This is our final team project for the <a href="https://bootcamp.unc.edu/data/">
 
 > The topic at hand was selected for its potential use in intelligent transportation applications that focus on monitoring of traffic flow, automated parking systems, and security enforcement.  Adding physical characteristics, with existing systems that track traffic patterns that include type, velocity, direction and position, (Vehicular Ad Hoc Networks - VANETs), would advance the information provided for use in additional applications.
 
-> Our first project Goal is to create a Image Recognition Modle, using the simplest form of the model, that will recognize whether or not a vehicle is present in an photo from our data set. 
+> Our first project Goal is to create a Image Recognition Model, using the simplest form of the model, that will recognize whether or not a vehicle is present in a photo from our data set. 
 
 > Once we achieve our first Goal, we will add to this model, and determine whether or not the vehicle in the image is a BMW or another brand of vehicle.
 
-> Future Goals of this project, with added complexity and continued development, is to determine the make and model of targeted vehicles. The final iteration will have a multidude of potential real world uses such as amber alert and law enforcement application integration. 
+> Future Goals of this project, with added complexity and continued development, is to determine the make and model of targeted vehicles. 
+
+> The final iteration will have a multidude of potential real world uses such as amber alert and law enforcement application integration. 
 
 ## Source Data Chosen
 
