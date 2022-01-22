@@ -1,3 +1,4 @@
+
 # Vehicle Identification
 ![logo](images/BMW2.png)
 
@@ -62,8 +63,6 @@ This is our final team project for the <a href="https://bootcamp.unc.edu/data/">
 
 ## **Anything the team would have done differently:**
 
-
-## **Communication Protocols:**
 There is a team Slack for regular updates. We meet twice a week after class and once more for final updates.
 Emergency contact will be by phone, numbers shared in Slack.
 
@@ -84,4 +83,5 @@ In addition to using a Flask template, we will also integrate D3.js for a fully 
 ## Results
 
 ## Summary
+
 We are able to commit now yay!
