@@ -80,8 +80,8 @@ Goal 1:
   *  _Database Link:_ <a href='http://cars.ckxsklg24qnv.us-east-2.rds.amazonaws.com/'> Cars DB </a>  
   *  _Database Port:_ 5432  
 > We will be using AWS R3 storge for the images.   
-  * _Storage Bucket:_ <a href='http://cars-vehicles.s3-website.us-east-2.amazonaws.com'> Training Set </a>  
-  * _Storage Bucket:_ <a href='http://non-vehicles.s3-website.us-east-2.amazonaws.com'> Testing Set </a>  
+  * _Storage Bucket:_ <a href='http://cars-traindataset.s3-website.us-east-2.amazonaws.com'> Training Set </a>  
+  * _Storage Bucket:_ <a href='http://cars-testdataset.s3-website.us-east-2.amazonaws.com'> Testing Set </a>  
 > We will integrate Flask to display the data.  
 
 #### Machine Learning
