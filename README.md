@@ -4,7 +4,7 @@
 
 # Overview
 
-Welcome to  <img src='images/CTRL-ALT-DEFEAT-SMALL.png' width=10% height=10% />     GitHub Machine Learning project page. 
+Welcome to  <img src='images/CTRL-ALT-DEFEAT-SMALL.png' width=12% height=10% />     GitHub Machine Learning project page. 
 
 This is our final team project for the <a href="https://bootcamp.unc.edu/data/">**UNC Chapel Hill Data Analytics Course**</a> 
 
@@ -13,7 +13,7 @@ This is our final team project for the <a href="https://bootcamp.unc.edu/data/">
 
 ## Communication Protocols
 
-**Team Name:** <img src='images/CTRL-ALT-DEFEAT-SMALL.png' width=10% height=10% />  
+**Team Name:** <img src='images/CTRL-ALT-DEFEAT-SMALL.png' width=12% height=10% />  
 
 **Team Members:**  
 
