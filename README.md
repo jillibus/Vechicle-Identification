@@ -86,7 +86,7 @@ Goal 1:
 
 #### Machine Learning
 > SciKitLearn is the ML library we'll be using to create a classifier to determine if an image has a vehicle or not, or what type of vehicle it has.  
-> TensorFlow will be the application and libarary where we will be using and testing the Neural Networks Models.    
+> TensorFlow will be the application and library where we will be using and testing the Neural Networks Models.    
 > The original training set is a 50-50 split of data, we will be adjusting this as future models are introduced.    
 
 ### Dashboard
