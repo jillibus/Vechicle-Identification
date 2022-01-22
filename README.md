@@ -69,8 +69,15 @@ Goal 1:
 > Further analysis will be completed using Python.
 
 #### Database Storage
+**Note: You will not beable to reach these links without proper authorization**
 > Postgresql is the database we intend to use hosted on Amazon Web Services, AWS.  
+  >   DB Name: cars
+  >   Database Instance ID: cars
+  >   Database Link: <a href='http://cars.ckxsklg24qnv.us-east-2.rds.amazonaws.com/'> Cars DB </a>
+  >   Database Port: 5432
 > We will be using AWS R3 storge for the images. 
+  >   Storage Bucket: <a href='http://cars-vehicles.s3-website.us-east-2.amazonaws.com'> Images with cars </a>
+  >   Storage Bucket: <a href='http://non-vehicles.s3-website.us-east-2.amazonaws.com'> Images without cars </a>
 > We will integrate Flask to display the data.
 
 #### Machine Learning
