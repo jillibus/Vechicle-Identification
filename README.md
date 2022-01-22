@@ -49,10 +49,10 @@ This is our final team project for the <a href="https://bootcamp.unc.edu/data/">
 > Dataset Source: <a href='https://ai.stanford.edu/~jkrause/cars/car_dataset.html'> https://ai.stanford.edu/~jkrause/cars/car_dataset.html </a>  
 > Number of Images: 16,185
 
-> ![paper](images/3drr13.pdf)
-> 3D Object Representations for Fine-Grained Categorization
-  Jonathan Krause, Michael Stark, Jia Deng, Li Fei-Fei
-  4th IEEE Workshop on 3D Representation and Recognition, at ICCV 2013 (3dRR-13). Sydney, Australia. Dec. 8, 2013.
+> ![paper](images/3drr13.pdf)  
+> 3D Object Representations for Fine-Grained Categorization  
+  Jonathan Krause, Michael Stark, Jia Deng, Li Fei-Fei  
+  4th IEEE Workshop on 3D Representation and Recognition, at ICCV 2013 (3dRR-13). Sydney, Australia. Dec. 8, 2013.  
 
 ## **Questions the team hopes to answer with the data:**
 
@@ -75,25 +75,25 @@ Goal 1:
 
 #### Database Storage
 **Note: You will not beable to reach these links without proper authorization**
-> Postgresql is the database we intend to use hosted on Amazon Web Services, AWS.  
-  >   DB Name: cars
-  >   Database Instance ID: cars
-  >   Database Link: <a href='http://cars.ckxsklg24qnv.us-east-2.rds.amazonaws.com/'> Cars DB </a>
-  >   Database Port: 5432
-> We will be using AWS R3 storge for the images. 
-  >   Storage Bucket: <a href='http://cars-vehicles.s3-website.us-east-2.amazonaws.com'> Images with cars </a>
-  >   Storage Bucket: <a href='http://non-vehicles.s3-website.us-east-2.amazonaws.com'> Images without cars </a>
-> We will integrate Flask to display the data.
+> Postgresql is the database we intend to use hosted on Amazon Web Services, AWS.    
+  *  _DB Name:_ cars  
+  *  _Database Instance ID:_ cars 
+  *  _Database Link:_ <a href='http://cars.ckxsklg24qnv.us-east-2.rds.amazonaws.com/'> Cars DB </a>  
+  *  _Database Port:_ 5432  
+> We will be using AWS R3 storge for the images.   
+  * _Storage Bucket:_ <a href='http://cars-vehicles.s3-website.us-east-2.amazonaws.com'> Images with cars </a>  
+  * _Storage Bucket:_ <a href='http://non-vehicles.s3-website.us-east-2.amazonaws.com'> Images without cars </a>  
+> We will integrate Flask to display the data.  
 
 #### Machine Learning
-> SciKitLearn is the ML library we'll be using to create a classifier to determine if an image has a vehicle or not, or what type of vehicle it has.
-> TensorFlow will be the application and libarary where we will be using and testing the Neural Networks Models.  
-> Our training and testing setup is ___. 
+> SciKitLearn is the ML library we'll be using to create a classifier to determine if an image has a vehicle or not, or what type of vehicle it has.  
+> TensorFlow will be the application and libarary where we will be using and testing the Neural Networks Models.    
+> Our training and testing setup is 70% Training and 30% Testing.    
 
 ### Dashboard
-> In addition to using a Flask template, we will also integrate D3.js for a fully functioning and interactive dashboard. 
-> We will also look at Tableau Dashboard to determine if that will work with our application.
-> It will be hosted on Amazon Web Services, AWS.
+> In addition to using a Flask template, we will also integrate D3.js for a fully functioning and interactive dashboard.   
+> We will also look at Tableau Dashboard to determine if that will work with our application.  
+> It will be hosted on Amazon Web Services, AWS.  
 
 ## Results
 
