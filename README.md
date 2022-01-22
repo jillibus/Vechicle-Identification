@@ -12,31 +12,32 @@ This is our final team project for the <a href="https://bootcamp.unc.edu/data/">
 
 ## Communication Protocols
 
-**Team Name:** ![teamlogo](CTRL-ALT-DEFEAT-SMALL.png)
+**Team Name:** ![teamlogo](CTRL-ALT-DEFEAT-SMALL.png)  
 
-**Team Members: **
+**Team Members:**  
 
 > <a href="https://github.com/hsp910"> Harsh Patel </a>  
 > <a href="https://github.com/jillibus"> Jill Hughes </a>  
 > <a href="https://github.com/ltmurphy"> Logan Murphy	</a>  
 > <a href="https://github.com/CrossCreed"> Mihai Anghel	</a>  
 
-> The team will regularly use **Slack** for update communiations and sharing of links/files. 
-> We will meet twice a week after class and once more during the weekend for final updates. 
+> The team will regularly use **Slack** for communicating updates and sharing of links/files. 
+> The team will meet twice a week, after class, and once more during the weekend for final updates. 
 > Any project emergency communication will be via phone. 
-
 
 ## Selected Project Topic
 
 **Vehicle Image Recognition**
 
-## Business Applications for _Vehicle Image Recognition_
+## Business Applications for Vehicle Image Recognition
 
-> The topic at hand was selected for its potential use in certain applications. 
+> The topic at hand was selected for its potential use in intelligent transportation applications that focus on monitoring of traffic flow, automated parking systems, and security enforcement.  Adding physical characteristics with existing systems that track traffic patterns that include type, velocity, direction and position, (Vehicular Ad Hoc Networks - VANETs), would advance the information provided for use in additional application uses.
 
-> Using image recogition, the simplest form of the model will recognize whether or not a vehicle is present in an photo from our data set. 
+> Our first project Goal is to create a Image Recognition Modle, using the simplest form of the model, that will recognize whether or not a vehicle is present in an photo from our data set. 
 
-> With added complexity and continued development, the aim of this project is to determine the make and model of targeted vehicles. The final iteration will have a multidude of potential real world uses such as amber alert and law enforcement application integration. 
+> Once we achieve our first Goal, we will add to this model, and determine whether or not the vehicle in the image is a BMW or another brand of vehicle.
+
+> Future Goals of this project, with added complexity and continued development, is to determine the make and model of targeted vehicles. The final iteration will have a multidude of potential real world uses such as amber alert and law enforcement application integration. 
 
 ## Source Data Chosen
 
