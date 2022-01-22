@@ -44,14 +44,19 @@ This is our final team project for the <a href="https://bootcamp.unc.edu/data/">
 
 ## Source Data Chosen
 
-* Data Sources: charity_data.csv
-* Software: Google Colabority, Jupyter Notebook, Python 3.7, Pandas
+> The Cars dataset contains 16,185 images of 196 classes of cars. The data is split into 8,144 training images and 8,041 testing images, where each class has been split roughly in a 50-50 split. Classes are typically at the level of Make, Model, Year, e.g. 2012 Tesla Model S or 2012 BMW M3 coupe.
+
+> Dataset Source: <a href='https://ai.stanford.edu/~jkrause/cars/car_dataset.html'> https://ai.stanford.edu/~jkrause/cars/car_dataset.html </a>  
+> Number of Images: 16,185
 
 ## **Questions the team hopes to answer with the data:**
 
+Goal 1:  
+> Can the model correctly predict if there is a vehicle in the image?
 
 ---
-## GOAL 1: Create a Image Recognition Model, using the simplest form of the model, that will recognize whether or not a vehicle is present in a photo from our data set. 
+## GOAL 1:   
+> Create a Image Recognition Model, using the simplest form of the model, that will recognize whether or not a vehicle is present in a photo from our data set. 
 
 ### Description of the data exploration phase of the project:
 
@@ -86,5 +91,5 @@ This is our final team project for the <a href="https://bootcamp.unc.edu/data/">
 > Anything the team would have done differently:
 
 
-Thank you for your time for reading our project details, please let us know if you need any additional information.
+Thank you for your time for reading our project details, please let us know if you need any additional information.  
 Harsh Patel, Jill Hughes, Logan Murphy, Mihai Anghel
