@@ -1,57 +1,68 @@
-# Vehicle-Identification
-## Overview
 
-Welcome to **Ctrl Alt Defeat's** GitHub Machine Learning project page. 
+# Vehicle Identification
+![logo](images/BMW2.png)
 
-This is our final team project for the **UNC Chapel Hill Data Analytics Course**. (feel free to edit/suggest/remove this section as you see fit)
+# Overview
 
-### **Communication Protocols**
+Welcome to ![teamlogo](CTRL-ALT-DEFEAT-SMALL.png)'s GitHub Machine Learning project page. 
 
-**Team Name:** Ctrl Alt Defeat
+This is our final team project for the <a href="https://bootcamp.unc.edu/data/">**UNC Chapel Hill Data Analytics Course**</a> 
 
-| `Team Members`|
-|:-------------:|
-| Harsh Patel	|           	
-| Jill Hughes	|
-| Logan Murphy	|
-| Mihai Anghel	|
+## GitHub Application
+<a href="https://jillibus.github.io/Vehicle-Identification">Vehicle Identification</a>
 
-The team will regularly use **Slack** for update communiations and sharing of links/files. 
+## Communication Protocols
 
-We will meet twice a week after class and once more during the weekend for final updates. 
+**Team Name:** ![teamlogo](CTRL-ALT-DEFEAT-SMALL.png)  
 
-Any project emergency communication will be via phone. 
-___
-### **Selected Topic**
+**Team Members:**  
 
-Vehicle Image Recognition
+> <a href="https://github.com/hsp910"> Harsh Patel </a>  
+> <a href="https://github.com/jillibus"> Jill Hughes </a>  
+> <a href="https://github.com/ltmurphy"> Logan Murphy	</a>  
+> <a href="https://github.com/CrossCreed"> Mihai Anghel	</a>  
 
-### **Reason**
+> The team will regularly use **Slack** for communicating updates and sharing of links/files. 
+> The team will meet twice a week, after class, and once more during the weekend for final updates. 
+> Any project emergency communication will be via phone. 
 
-> The topic at hand was selected for its potential use in certain applications. 
+## Selected Project Topic
 
-> Using image recogition, the simplest form of the model will recognize whether or not a vehicle is present in an photo from our data set. 
+**Vehicle Image Recognition**
 
-> With added complexity and continued development, the aim of this project is to determine the make and model of targeted vehicles. The final iteration will have a multidude of potential real world uses such as amber alert and law enforcement application integration. 
+## Business Applications for Vehicle Image Recognition
 
-### **Description of the source of data:**
+> The topic at hand was selected for its potential use in intelligent transportation applications that focus on monitoring of traffic flow, automated parking systems, and security enforcement.  Adding physical characteristics, with existing systems that track traffic patterns that include type, velocity, direction and position, (Vehicular Ad Hoc Networks - VANETs), would advance the information provided for use in additional applications.
 
-### **Questions the team hopes to answer with the data:**
+> Our first project Goal is to create a Image Recognition Model, using the simplest form of the model, that will recognize whether or not a vehicle is present in a photo from our data set. 
 
-### **Description of the data exploration phase of the project:**
+> Once we achieve our first Goal, we will add to this model, and determine whether or not the vehicle in the image is a BMW or another brand of vehicle.
 
-### **Description of the analysis phase of the project:**
+> Future Goals of this project, with added complexity and continued development, is to determine the make and model of targeted vehicles. 
 
-### **Technologies, languages, tools, and algorithms used throughout the project:**
+> The final iteration will have a multidude of potential real world uses such as amber alert and law enforcement application integration. 
 
-### **Result of analysis:**
+## Source Data Chosen
 
-### **Recommendation for future analysis:**
+* Data Sources: charity_data.csv
+* Software: Google Colabority, Jupyter Notebook, Python 3.7, Pandas
 
-### **Anything the team would have done differently:**
+## **Questions the team hopes to answer with the data:**
 
 
-### **Communication Protocols:**
+---
+## **Description of the data exploration phase of the project:**
+
+## **Description of the analysis phase of the project:**
+
+## **Technologies, languages, tools, and algorithms used throughout the project:**
+
+## **Result of analysis:**
+
+## **Recommendation for future analysis:**
+
+## **Anything the team would have done differently:**
+
 There is a team Slack for regular updates. We meet twice a week after class and once more for final updates.
 Emergency contact will be by phone, numbers shared in Slack.
 
@@ -72,4 +83,5 @@ In addition to using a Flask template, we will also integrate D3.js for a fully 
 ## Results
 
 ## Summary
+
 We are able to commit now yay!
