@@ -28,7 +28,7 @@ This is our final team project for the <a href="https://bootcamp.unc.edu/data/">
 
 ## Selected Project Topic
 
-**Vehicle Image Recognition**
+### Vehicle Image Recognition
 
 ## Business Applications for Vehicle Image Recognition
 
