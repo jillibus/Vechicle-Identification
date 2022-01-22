@@ -4,7 +4,7 @@
 
 # Overview
 
-Welcome to ![teamlogo](CTRL-ALT-DEFEAT-SMALL.png)'s GitHub Machine Learning project page. 
+Welcome to  <img src='images/CTRL-ALT-DEFEAT-SMALL.png' width=10% height=10% />     GitHub Machine Learning project page. 
 
 This is our final team project for the <a href="https://bootcamp.unc.edu/data/">**UNC Chapel Hill Data Analytics Course**</a> 
 
@@ -13,7 +13,7 @@ This is our final team project for the <a href="https://bootcamp.unc.edu/data/">
 
 ## Communication Protocols
 
-**Team Name:** ![teamlogo](CTRL-ALT-DEFEAT-SMALL.png)  
+**Team Name:** <img src='images/CTRL-ALT-DEFEAT-SMALL.png' width=10% height=10% />  
 
 **Team Members:**  
 
@@ -22,9 +22,9 @@ This is our final team project for the <a href="https://bootcamp.unc.edu/data/">
 > <a href="https://github.com/ltmurphy"> Logan Murphy	</a>  
 > <a href="https://github.com/CrossCreed"> Mihai Anghel	</a>  
 
-> The team will regularly use **Slack** for communicating updates and sharing of links/files. 
-> The team will meet twice a week, after class, and once more during the weekend for final updates. 
-> Any project emergency communication will be via phone. 
+> The team will regularly use **Slack** for communicating updates and sharing of links/files.   
+> The team will meet twice a week, after class, and once more during the weekend for final updates.   
+> Any project emergency communication will be via phone.   
 
 ## Selected Project Topic
 
@@ -44,44 +44,64 @@ This is our final team project for the <a href="https://bootcamp.unc.edu/data/">
 
 ## Source Data Chosen
 
-* Data Sources: charity_data.csv
-* Software: Google Colabority, Jupyter Notebook, Python 3.7, Pandas
+> The Cars dataset contains 16,185 images of 196 classes of cars. The data is split into 8,144 training images and 8,041 testing images, where each class has been split roughly in a 50-50 split. Classes are typically at the level of Make, Model, Year, e.g. 2012 Tesla Model S or 2012 BMW M3 coupe.
+
+> Dataset Source: <a href='https://ai.stanford.edu/~jkrause/cars/car_dataset.html'> https://ai.stanford.edu/~jkrause/cars/car_dataset.html </a>  
+> Number of Images: 16,185
+
+> ![paper](images/3drr13.pdf)  
+> 3D Object Representations for Fine-Grained Categorization  
+  Jonathan Krause, Michael Stark, Jia Deng, Li Fei-Fei  
+  4th IEEE Workshop on 3D Representation and Recognition, at ICCV 2013 (3dRR-13). Sydney, Australia. Dec. 8, 2013.  
 
 ## **Questions the team hopes to answer with the data:**
 
+Goal 1:  
+> Can the model correctly predict if there is a vehicle in the image?
 
 ---
-## **Description of the data exploration phase of the project:**
+## GOAL 1:   
+> Create a Image Recognition Model, using the simplest form of the model, that will recognize whether or not a vehicle is present in a photo from our data set. 
 
-## **Description of the analysis phase of the project:**
-
-## **Technologies, languages, tools, and algorithms used throughout the project:**
-
-## **Result of analysis:**
-
-## **Recommendation for future analysis:**
-
-## **Anything the team would have done differently:**
-
-There is a team Slack for regular updates. We meet twice a week after class and once more for final updates.
-Emergency contact will be by phone, numbers shared in Slack.
+### Description of the data exploration phase of the project:
 
 
-### Technologies Used
+### Description of the analysis phase of the project:
+
+### Technologies, languages, tools, and algorithms used throughout the project:
 #### Data Cleaning and Analysis
-Pandas will be used to clean the data and perform an exploratory analysis. Further analysis will be completed using Python.
+> Pandas will be used to clean the data and perform an exploratory analysis. 
+> Further analysis will be completed using Python.
 
 #### Database Storage
-Mongo is the database we intend to use, and we will integrate Flask to display the data.
+**Note: You will not beable to reach these links without proper authorization**
+> Postgresql is the database we intend to use hosted on Amazon Web Services, AWS.    
+  *  _DB Name:_ cars  
+  *  _Database Instance ID:_ cars 
+  *  _Database Link:_ <a href='http://cars.ckxsklg24qnv.us-east-2.rds.amazonaws.com/'> Cars DB </a>  
+  *  _Database Port:_ 5432  
+> We will be using AWS R3 storge for the images.   
+  * _Storage Bucket:_ <a href='http://cars-vehicles.s3-website.us-east-2.amazonaws.com'> Images with cars </a>  
+  * _Storage Bucket:_ <a href='http://non-vehicles.s3-website.us-east-2.amazonaws.com'> Images without cars </a>  
+> We will integrate Flask to display the data.  
 
 #### Machine Learning
-SciKitLearn is the ML library we'll be using to create a classifier. Our training and testing setup is ___. Extra ML verbiage here.
+> SciKitLearn is the ML library we'll be using to create a classifier to determine if an image has a vehicle or not, or what type of vehicle it has.  
+> TensorFlow will be the application and libarary where we will be using and testing the Neural Networks Models.    
+> Our training and testing setup is 70% Training and 30% Testing.    
 
-#### Dashboard
-In addition to using a Flask template, we will also integrate D3.js for a fully functioning and interactive dashboard. It will be hosted on AWS.
+### Dashboard
+> In addition to using a Flask template, we will also integrate D3.js for a fully functioning and interactive dashboard.   
+> We will also look at Tableau Dashboard to determine if that will work with our application.  
+> It will be hosted on Amazon Web Services, AWS.  
 
 ## Results
 
 ## Summary
+> Recommendation for future analysis:
 
-We are able to commit now yay!
+> Anything the team would have done differently:
+
+
+Thank you for your time for reading our project details, please let us know if you need any additional information.  
+Harsh Patel, Jill Hughes, Logan Murphy, Mihai Anghel
