@@ -49,10 +49,9 @@ This is our final team project for the <a href="https://bootcamp.unc.edu/data/">
 > Dataset Source: <a href='https://ai.stanford.edu/~jkrause/cars/car_dataset.html'> https://ai.stanford.edu/~jkrause/cars/car_dataset.html </a>  
 > Number of Images: 16,185
 
-> [paper](images/3drr13.pdf)  
 > 3D Object Representations for Fine-Grained Categorization  
-  Jonathan Krause, Michael Stark, Jia Deng, Li Fei-Fei  
-  4th IEEE Workshop on 3D Representation and Recognition, at ICCV 2013 (3dRR-13). Sydney, Australia. Dec. 8, 2013.  
+  Jonathan Krause, Michael Stark, Jia Deng, Li Fei-Fei    
+  4th IEEE Workshop on 3D Representation and Recognition, at ICCV 2013 (3dRR-13). Sydney, Australia. Dec. 8, 2013.    
 
 ## **Questions the team hopes to answer with the data:**
 
