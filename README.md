@@ -80,14 +80,14 @@ Goal 1:
   *  _Database Link:_ <a href='http://cars.ckxsklg24qnv.us-east-2.rds.amazonaws.com/'> Cars DB </a>  
   *  _Database Port:_ 5432  
 > We will be using AWS R3 storge for the images.   
-  * _Storage Bucket:_ <a href='http://cars-vehicles.s3-website.us-east-2.amazonaws.com'> Images with cars </a>  
-  * _Storage Bucket:_ <a href='http://non-vehicles.s3-website.us-east-2.amazonaws.com'> Images without cars </a>  
+  * _Storage Bucket:_ <a href='http://cars-vehicles.s3-website.us-east-2.amazonaws.com'> Training Set </a>  
+  * _Storage Bucket:_ <a href='http://non-vehicles.s3-website.us-east-2.amazonaws.com'> Testing Set </a>  
 > We will integrate Flask to display the data.  
 
 #### Machine Learning
 > SciKitLearn is the ML library we'll be using to create a classifier to determine if an image has a vehicle or not, or what type of vehicle it has.  
 > TensorFlow will be the application and libarary where we will be using and testing the Neural Networks Models.    
-> Our training and testing setup is 70% Training and 30% Testing.    
+> The original training set is a 50-50 split of data, we will be adjusting this as future models are introduced.    
 
 ### Dashboard
 > In addition to using a Flask template, we will also integrate D3.js for a fully functioning and interactive dashboard.   
