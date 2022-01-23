@@ -74,7 +74,7 @@ TBD
 > Further analysis will be completed using Python.
 
 #### Database 
-**Note: You will not beable to reach these links without proper authorization**
+**Note: You will not be able to reach these links without proper authorization**
 > Postgresql is the database we intend to use hosted on Amazon Web Services, AWS.    
   *  _DB Name:_ cars  
   *  _Database Instance ID:_ cars 
@@ -83,7 +83,6 @@ TBD
 > We will be using AWS R3 storge for the images.   
   * _Storage Bucket:_ <a href='http://cars-traindataset.s3-website.us-east-2.amazonaws.com'> Training Set </a>  
   * _Storage Bucket:_ <a href='http://cars-testdataset.s3-website.us-east-2.amazonaws.com'> Testing Set </a>  
-> We will integrate Flask to display the data.  
 > Database Schema
 <img src='images/ERD-CarsDB.png' width=75% height=50% />
 
