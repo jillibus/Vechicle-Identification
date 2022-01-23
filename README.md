@@ -88,6 +88,7 @@ TBD
 <img src='images/ERD-CarsDB.png' width=75% height=50% />
 
  * _Creation Scripts:_ Located in **DB Images/create_tables.sql**  
+ * _Sample Data_: Located at **DBTableExamples.txt**
 ---  
 > Database on AWS
 <img src='images/Table-Constraint-Setup.png' width=50% height=50% /> 
@@ -96,6 +97,10 @@ TBD
 > Database population:
 <img src='images/image_count.png' width=75% height=50% />  
 <img src='images/Images_Table.png' width=75% height=50% />
+
+---
+> Database Example:
+<img src='images/DBTableExamples.png' width=50% height=50% />
 
 #### Machine Learning Models
 > SciKitLearn is the ML library we'll be using to create a classifier to determine if an image has a vehicle or not, or what type of vehicle it has.  
