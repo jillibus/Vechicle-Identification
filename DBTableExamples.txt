@@ -3,16 +3,16 @@ Database:  cars
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Table: label
 Columns:   
-*  class	    string
+*  class	  string
 *  count		int
 
 Examples:
-class											count
-==================				=======
-GMC Savana Van 2012					136
+class											    count
+==================				    =======
+GMC Savana Van 2012					  136
 AM General Hummer SUV	2000		0
-Acura Integra Type R 2001				89
-Crysler 300 SRT-8 2010					97
+Acura Integra Type R 2001			89
+Crysler 300 SRT-8 2010				97
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Table: split
@@ -22,24 +22,24 @@ Columns:
 
 Examples:
 class			count
-=======      =========				
-test				8,041
-train				8,144
+=======   =========				
+test			8,041
+train			8,144
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Table: image
 Columns:
-* image_name		string
+* image_name		  string
 * image_location	string
-* class					string
-* vehicle				char(1)   
+* class					  string
+* vehicle				  char(1)   
 * non_vehicle			char(1)
 
 Examples:
-image_name			image_location				class								  vehicle			non_vehicle
-=============	================= 	===================	  =======		=========
-00001.jpg				<url for train bucket>		non_vehicle						  N					Y
-00102.jpg				<url for train bucket>      GMC Savana Van 2012		  Y					N		
-00002.jpg				<url for test bucket>  		AM General Hummer SUV	  Y					N	
-00874.jpg				<url for test bucket>  		Acura Integra Type R 2001	  Y					N	
-01287.jpg				<url for train bucket>      Crysler 300 SRT-8 2010		  Y					N	
+image_name			image_location				class								  vehicle		non_vehicle
+=============	================= 	===================	      =======		=========
+00001.jpg			cars-testdataset    non-vehicle					      N					Y
+00102.jpg			cars-testdataset    GMC Savana Van 2012		    Y					N		
+00002.jpg			cars-traindataset		AM General Hummer SUV	    Y					N	
+00874.jpg			cars-traindataset 	Acura Integra Type R 2001	Y					N	
+01287.jpg			cars-testdataset    Crysler 300 SRT-8 2010		Y					N	
