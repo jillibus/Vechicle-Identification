@@ -88,7 +88,6 @@ TBD
 <img src='images/ERD-CarsDB.png' width=75% height=50% />
 
  * _Creation Scripts:_ Located in **DB Images/create_tables.sql**  
- * _Sample Data_: Located at **DBTableExamples.txt**
 ---  
 > Database on AWS
 <img src='images/Table-Constraint-Setup.png' width=50% height=50% /> 
@@ -98,14 +97,15 @@ TBD
 <img src='images/image_count.png' width=75% height=50% />  
 <img src='images/Images_Table.png' width=75% height=50% />
 
+ * _Sample Data_: Located at **DBTableExamples.txt**
 ---
 > Database Example:
-<img src='images/DBTableExamples.png' width=50% height=50% />
+<img src='images/DBTableExamples.png' width=75% height=75% />
 
 #### Machine Learning Models
 > SciKitLearn is the ML library we'll be using to create a classifier to determine if an image has a vehicle or not, or what type of vehicle it has.  
 > TensorFlow will be the application and library where we will be using and testing the Neural Networks Models.
-> The Model we will use is Sequential, adding hidden layers with activation set to _reLU_, using the optimizer _adam_ and _accuracy_ metrics_.    
+> The Model we will use is Sequential, adding hidden layers with activation set to _reLU_, using the optimizer _adam_ and _accuracy_ metrics.    
 > The original training set is a 50-50 split of data, we will be adjusting this as future models are introduced.    
 
 ### Dashboard
