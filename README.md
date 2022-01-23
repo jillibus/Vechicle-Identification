@@ -28,7 +28,7 @@ This is our final team project for the <a href="https://bootcamp.unc.edu/data/">
 
 ## Selected Project Topic
 
-**Vehicle Image Recognition**
+### Vehicle Image Recognition
 
 ## Business Applications for Vehicle Image Recognition
 
@@ -63,16 +63,17 @@ Goal 1:
 > Create a Image Recognition Model, using the simplest form of the model, that will recognize whether or not a vehicle is present in a photo from our data set. 
 
 ### Description of the data exploration phase of the project:
-
+TBD
 
 ### Description of the analysis phase of the project:
+> We will be evaluating the images to determine what features we want to capture for the dataset and then store into database tables.
 
 ### Technologies, languages, tools, and algorithms used throughout the project:
 #### Data Cleaning and Analysis
 > Pandas will be used to clean the data and perform an exploratory analysis. 
 > Further analysis will be completed using Python.
 
-#### Database Storage
+#### Database 
 **Note: You will not beable to reach these links without proper authorization**
 > Postgresql is the database we intend to use hosted on Amazon Web Services, AWS.    
   *  _DB Name:_ cars  
@@ -80,27 +81,41 @@ Goal 1:
   *  _Database Link:_ <a href='http://cars.ckxsklg24qnv.us-east-2.rds.amazonaws.com/'> Cars DB </a>  
   *  _Database Port:_ 5432  
 > We will be using AWS R3 storge for the images.   
-  * _Storage Bucket:_ <a href='http://cars-vehicles.s3-website.us-east-2.amazonaws.com'> Training Set </a>  
-  * _Storage Bucket:_ <a href='http://non-vehicles.s3-website.us-east-2.amazonaws.com'> Testing Set </a>  
+  * _Storage Bucket:_ <a href='http://cars-traindataset.s3-website.us-east-2.amazonaws.com'> Training Set </a>  
+  * _Storage Bucket:_ <a href='http://cars-testdataset.s3-website.us-east-2.amazonaws.com'> Testing Set </a>  
 > We will integrate Flask to display the data.  
+> Database Schema
+<img src='images/ERD-CarsDB.png' width=75% height=50% />
 
-#### Machine Learning
+ * _Creation Scripts:_ Located in **DB Images/create_tables.sql**  
+---  
+> Database on AWS
+<img src='images/Table-Constraint-Setup.png' width=50% height=50% /> 
+
+---  
+> Database population:
+<img src='images/image_count.png' width=75% height=50% />  
+<img src='images/Images_Table.png' width=75% height=50% />
+
+#### Machine Learning Models
 > SciKitLearn is the ML library we'll be using to create a classifier to determine if an image has a vehicle or not, or what type of vehicle it has.  
-> TensorFlow will be the application and library where we will be using and testing the Neural Networks Models.    
+> TensorFlow will be the application and library where we will be using and testing the Neural Networks Models.
+> The Model we will use is Sequential, adding hidden layers with activation set to _reLU_, using the optimizer _adam_ and _accuracy_ metrics_.    
 > The original training set is a 50-50 split of data, we will be adjusting this as future models are introduced.    
 
 ### Dashboard
 > In addition to using a Flask template, we will also integrate D3.js for a fully functioning and interactive dashboard.   
-> We will also look at Tableau Dashboard to determine if that will work with our application.  
-> It will be hosted on Amazon Web Services, AWS.  
+> We will present our project in Tableau Dashboard for our final deliverable. 
+> Our application will be hosted on Amazon Web Services, AWS.  
 
 ## Results
 
 ## Summary
 > Recommendation for future analysis:
+TBD
 
 > Anything the team would have done differently:
-
+TBD
 
 Thank you for your time for reading our project details, please let us know if you need any additional information.  
 Harsh Patel, Jill Hughes, Logan Murphy, Mihai Anghel
