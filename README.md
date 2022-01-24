@@ -30,7 +30,7 @@ CTRL ALT DEFEAT
 
 ### Communication Protocols
 
-* The team will regularly use **Slack** :speech_balloon: for communicating updates and sharing of links/files   
+* The team will regularly use <a href="https://slack.com/"> **Slack** </a> :speech_balloon: for communicating updates and sharing of links/files   
 * The team will meet twice a week, after class, and once more during the weekend for final updates.   
 * Any project emergency communication will be via phone :thumbsup:  
 
