@@ -11,13 +11,14 @@
 ## GitHub Application
 <a href="https://jillibus.github.io/Vehicle-Identification">Vehicle Identification</a>
 
-## Communication Protocols
+## General Information
 
 **Team Name:** 
 
-CTRL ALT DEFEAT 
+CTRL ALT DEFEAT
 
 **Team Logo:**
+
 <img src='images/CTRL-ALT-DEFEAT-SMALL_edited.png' width=12% height=10% />
 
 **Team Members:**  
@@ -27,9 +28,11 @@ CTRL ALT DEFEAT
 > <a href="https://github.com/ltmurphy"> Logan Murphy	</a>  
 > <a href="https://github.com/CrossCreed"> Mihai Anghel	</a>  
 
-⋅⋅* The team will regularly use **Slack** for communicating updates and sharing of links/files :speech_balloon:   
-⋅⋅* The team will meet twice a week, after class, and once more during the weekend for final updates.   
-⋅⋅* Any project emergency communication will be via phone.   
+### Communication Protocols
+
+* The team will regularly use **Slack** for communicating updates and sharing of links/files :speech_balloon:   
+* The team will meet twice a week, after class, and once more during the weekend for final updates.   
+* Any project emergency communication will be via phone.   
 
 ## Selected Project Topic
 
