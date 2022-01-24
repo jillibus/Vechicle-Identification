@@ -19,7 +19,7 @@ CTRL ALT DEFEAT
 
 **Team Logo:**
 
-<img src='images/CTRL-ALT-DEFEAT-SMALL_edited.png' width=12% height=10% />
+<img src='images/CTRL-ALT-DEFEAT-SMALL_edited.png' width=14% height=12% />
 
 **Team Members:**  
 
@@ -30,9 +30,9 @@ CTRL ALT DEFEAT
 
 ### Communication Protocols
 
-* The team will regularly use **Slack** for communicating updates and sharing of links/files :speech_balloon:   
+* The team will regularly use **Slack** :speech_balloon: for communicating updates and sharing of links/files   
 * The team will meet twice a week, after class, and once more during the weekend for final updates.   
-* Any project emergency communication will be via phone.   
+* Any project emergency communication will be via phone :thumbsup:  
 
 ## Selected Project Topic
 
