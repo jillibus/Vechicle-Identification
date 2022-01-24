@@ -1,75 +1,125 @@
-# Vehicle-Identification
-## Overview
 
-Welcome to **Ctrl Alt Defeat's** GitHub Machine Learning project page. 
+# Vehicle Identification
+![logo](images/BMW2.png)
 
-This is our final team project for the **UNC Chapel Hill Data Analytics Course**. (feel free to edit/suggest/remove this section as you see fit)
+# Overview
 
-### **Communication Protocols**
+Welcome to  <img src='images/CTRL-ALT-DEFEAT-SMALL.png' width=12% height=10% />     GitHub Machine Learning project page. 
 
-**Team Name:** Ctrl Alt Defeat
+This is our final team project for the <a href="https://bootcamp.unc.edu/data/">**UNC Chapel Hill Data Analytics Course**</a> 
 
-| `Team Members`|
-|:-------------:|
-| Harsh Patel	|           	
-| Jill Hughes	|
-| Logan Murphy	|
-| Mihai Anghel	|
+## GitHub Application
+<a href="https://jillibus.github.io/Vehicle-Identification">Vehicle Identification</a>
 
-The team will regularly use **Slack** for update communiations and sharing of links/files. 
+## Communication Protocols
 
-We will meet twice a week after class and once more during the weekend for final updates. 
+**Team Name:** <img src='images/CTRL-ALT-DEFEAT-SMALL.png' width=12% height=10% />  
 
-Any project emergency communication will be via phone. 
-___
-### **Selected Topic**
+**Team Members:**  
 
-Vehicle Image Recognition
+> <a href="https://github.com/hsp910"> Harsh Patel </a>  
+> <a href="https://github.com/jillibus"> Jill Hughes </a>  
+> <a href="https://github.com/ltmurphy"> Logan Murphy	</a>  
+> <a href="https://github.com/CrossCreed"> Mihai Anghel	</a>  
 
-### **Reason**
+> The team will regularly use **Slack** for communicating updates and sharing of links/files.   
+> The team will meet twice a week, after class, and once more during the weekend for final updates.   
+> Any project emergency communication will be via phone.   
 
-> The topic at hand was selected for its potential use in certain applications. 
+## Selected Project Topic
 
-> Using image recogition, the simplest form of the model will recognize whether or not a vehicle is present in an photo from our data set. 
+### Vehicle Image Recognition
 
-> With added complexity and continued development, the aim of this project is to determine the make and model of targeted vehicles. The final iteration will have a multidude of potential real world uses such as amber alert and law enforcement application integration. 
+## Business Applications for Vehicle Image Recognition
 
-### **Description of the source of data:**
+> The topic at hand was selected for its potential use in intelligent transportation applications that focus on monitoring of traffic flow, automated parking systems, and security enforcement.  Adding physical characteristics, with existing systems that track traffic patterns that include type, velocity, direction and position, (Vehicular Ad Hoc Networks - VANETs), would advance the information provided for use in additional applications.
 
-### **Questions the team hopes to answer with the data:**
+> Our first project Goal is to create a Image Recognition Model, using the simplest form of the model, that will recognize whether or not a vehicle is present in a photo from our data set. 
 
-### **Description of the data exploration phase of the project:**
+> Once we achieve our first Goal, we will add to this model, and determine whether or not the vehicle in the image is a BMW or another brand of vehicle.
 
-### **Description of the analysis phase of the project:**
+> Future Goals of this project, with added complexity and continued development, is to determine the make and model of targeted vehicles. 
 
-### **Technologies, languages, tools, and algorithms used throughout the project:**
+> The final iteration will have a multidude of potential real world uses such as amber alert and law enforcement application integration. 
 
-### **Result of analysis:**
+## Source Data Chosen
 
-### **Recommendation for future analysis:**
+> The Cars dataset contains 16,185 images of 196 classes of cars. The data is split into 8,144 training images and 8,041 testing images, where each class has been split roughly in a 50-50 split. Classes are typically at the level of Make, Model, Year, e.g. 2012 Tesla Model S or 2012 BMW M3 coupe.
 
-### **Anything the team would have done differently:**
+> Dataset Source: <a href='https://ai.stanford.edu/~jkrause/cars/car_dataset.html'> https://ai.stanford.edu/~jkrause/cars/car_dataset.html </a>  
+> Number of Images: 16,185
 
+> 3D Object Representations for Fine-Grained Categorization  
+  Jonathan Krause, Michael Stark, Jia Deng, Li Fei-Fei    
+  4th IEEE Workshop on 3D Representation and Recognition, at ICCV 2013 (3dRR-13). Sydney, Australia. Dec. 8, 2013.    
 
-### **Communication Protocols:**
-There is a team Slack for regular updates. We meet twice a week after class and once more for final updates.
-Emergency contact will be by phone, numbers shared in Slack.
+## **Questions the team hopes to answer with the data:**
 
+Goal 1:  
+> Can the model correctly predict if there is a vehicle in the image?
 
-### Technologies Used
+---
+## GOAL 1:   
+> Create a Image Recognition Model, using the simplest form of the model, that will recognize whether or not a vehicle is present in a photo from our data set. 
+
+### Description of the data exploration phase of the project:
+TBD
+
+### Description of the analysis phase of the project:
+> We will be evaluating the images to determine what features we want to capture for the dataset and then store into database tables.
+
+### Technologies, languages, tools, and algorithms used throughout the project:
 #### Data Cleaning and Analysis
-Pandas will be used to clean the data and perform an exploratory analysis. Further analysis will be completed using Python.
+> Pandas will be used to clean the data and perform an exploratory analysis. 
+> Further analysis will be completed using Python.
 
-#### Database Storage
-Mongo is the database we intend to use, and we will integrate Flask to display the data.
+#### Database 
+**Note: You will not be able to reach these links without proper authorization**
+> Postgresql is the database we intend to use hosted on Amazon Web Services, AWS.    
+  *  _DB Name:_ cars  
+  *  _Database Instance ID:_ cars 
+  *  _Database Link:_ <a href='http://cars.ckxsklg24qnv.us-east-2.rds.amazonaws.com/'> Cars DB </a>  
+  *  _Database Port:_ 5432  
+> We will be using AWS R3 storge for the images.   
+  * _Storage Bucket:_ <a href='http://cars-traindataset.s3-website.us-east-2.amazonaws.com'> Training Set </a>  
+  * _Storage Bucket:_ <a href='http://cars-testdataset.s3-website.us-east-2.amazonaws.com'> Testing Set </a>  
+> Database Schema
+<img src='images/ERD-CarsDB.png' width=75% height=50% />
 
-#### Machine Learning
-SciKitLearn is the ML library we'll be using to create a classifier. Our training and testing setup is ___. Extra ML verbiage here.
+ * _Creation Scripts:_ Located in **DB Images/create_tables.sql**  
+---  
+> Database on AWS
+<img src='images/Table-Constraint-Setup.png' width=50% height=50% /> 
 
-#### Dashboard
-In addition to using a Flask template, we will also integrate D3.js for a fully functioning and interactive dashboard. It will be hosted on AWS.
+---  
+> Database population:
+<img src='images/image_count.png' width=75% height=50% />  
+<img src='images/Images_Table.png' width=75% height=50% />
+
+ * _Sample Data_: Located at **DBTableExamples.txt**
+---
+> Database Example:
+<img src='images/DBTableExamples.png' width=75% height=75% />
+
+#### Machine Learning Models
+> SciKitLearn is the ML library we'll be using to create a classifier to determine if an image has a vehicle or not, or what type of vehicle it has.  
+> TensorFlow will be the application and library where we will be using and testing the Neural Networks Models.
+> The Model we will use is Sequential, adding hidden layers with activation set to _reLU_, using the optimizer _adam_ and _accuracy_ metrics.    
+> The original training set is a 50-50 split of data, we will be adjusting this as future models are introduced.    
+
+### Dashboard
+> In addition to using a Flask template, we will also integrate D3.js for a fully functioning and interactive dashboard.   
+> We will present our project in Tableau Dashboard for our final deliverable. 
+> Our application will be hosted on Amazon Web Services, AWS.  
 
 ## Results
 
 ## Summary
-We are able to commit now yay!
+> Recommendation for future analysis:
+TBD
+
+> Anything the team would have done differently:
+TBD
+
+Thank you for your time for reading our project details, please let us know if you need any additional information.  
+Harsh Patel, Jill Hughes, Logan Murphy, Mihai Anghel
