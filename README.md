@@ -42,14 +42,6 @@ CTRL ALT DEFEAT
 
 > The topic at hand was selected for its potential use in intelligent transportation applications that focus on monitoring of traffic flow, automated parking systems, and security enforcement.  Adding physical characteristics, with existing systems that track traffic patterns that include type, velocity, direction and position, (Vehicular Ad Hoc Networks - VANETs), would advance the information provided for use in additional applications.
 
-> Our first project Goal is to create an _Image Recognition Model_, with the simplest form of the model recognizing whether or not a vehicle is present in a photo from our data set. 
-
-> Once we achieve our first Goal is successful, we will build on the model so that it can determine whether or not the vehicle in the image is a BMW or another brand of vehicle.
-
-> Further Goals for this project, with added complexity and continued development, are to determine the make and model of targeted vehicles. 
-
-> The final iteration will have a multidude of potential real world uses such as amber alert and law enforcement application integration. 
-
 ## Source Data Chosen
 
 > The Cars dataset contains *16,185* images of *196* classes of cars. The data is split into *8,144* training images and *8,041* testing images, where each class has been split roughly in a 50-50 split. Classes are typically at the level of Make, Model, Year, e.g. **__2012 Tesla Model S__** or **__2012 BMW M3 coupe__**.
@@ -59,15 +51,26 @@ CTRL ALT DEFEAT
 
 > 3D Object Representations for Fine-Grained Categorization  
   Jonathan Krause, Michael Stark, Jia Deng, Li Fei-Fei    
-  4th IEEE Workshop on 3D Representation and Recognition, at ICCV 2013 (3dRR-13). Sydney, Australia. Dec. 8, 2013.    
+  4th IEEE Workshop on 3D Representation and Recognition, at ICCV 2013 (3dRR-13). Sydney, Australia. Dec. 8, 2013.   
+  
+## Project Goal
+
+> Our Project Goal is to create an _Image Recognition Model_, with the simplest form of the model recognizing whether or not a vehicle is present in a photo from our data set. 
+
+## Future Goals
+_After Course Completion_
+> Our next goal we will build on the model so that it can determine whether or not the vehicle in the image is a BMW or another brand of vehicle.
+
+> Further Goals for this project, with added complexity and continued development, are to determine the make and model of targeted vehicles. 
+
+> The final iteration will have a multidude of potential real world uses such as amber alert and law enforcement application integration. 
 
 ## **Questions the team hopes to answer with the data:**
-
-Goal 1:  
+ 
 > Can the model correctly predict if there is a vehicle in the image?
 
 ---
-## GOAL 1:   
+## GOAL:   
 > Create a Image Recognition Model, using the simplest form of the model, that will recognize whether or not a vehicle is present in a photo from our data set. 
 
 ### Description of the data exploration phase of the project:
