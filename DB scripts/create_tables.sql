@@ -16,7 +16,6 @@ create table image (
   image_location varchar(75) not null,
   class varchar(50),
   vehicle char(1) check (vehicle in ('Y','N')),
-  non_vehicle char(1) check (non_vehicle in ('Y','N')),
   primary key (image_location, image_name),
   foreign key (class) 
 	references label (class)
