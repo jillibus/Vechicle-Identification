@@ -95,7 +95,7 @@ TBD
   * _Storage Bucket:_ <a href='http://cars-traindataset.s3-website.us-east-2.amazonaws.com'> Training Set </a>  
   * _Storage Bucket:_ <a href='http://cars-testdataset.s3-website.us-east-2.amazonaws.com'> Testing Set </a>  
 > Database Schema
-<img src='images/ERD-CarsDB.png' width=75% height=50% />
+<img src='images/ERD_CarsDB.png' width=75% height=50% />
 
  * _Creation Scripts:_ Located in **DB Images/create_tables.sql**  
 ---  
