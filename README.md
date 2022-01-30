@@ -100,12 +100,12 @@ TBD
  * _Creation Scripts:_ Located in **DB Images/create_tables.sql**  
 ---  
 > Database on AWS
-<img src='images/Table-Constraint-Setup.png' width=50% height=50% /> 
+<img src='images/Table-Constraint-Setup.png' width=40% height=30% /> 
 
 ---  
 > Database population:
-<img src='images/image_count.png' width=75% height=50% />  
-<img src='images/Images_Table.png' width=75% height=50% />
+<img src='images/Label_count.png' width=50% height=30% />
+<img src='images/Image_count.png' width=50% height=30% />  
 
  * _Sample Data_: Located at **DBTableExamples.txt**
 ---
