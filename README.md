@@ -74,7 +74,36 @@ _After Course Completion_
 > Create a Image Recognition Model, using the simplest form of the model, that will recognize whether or not a vehicle is present in a photo from our data set. 
 
 ### Description of the data exploration phase of the project:
-TBD
+
+> The data exploration phase of this project was a challenge for our team.  The data from Stanford University came in pieces.  
+  * The images were divided into 2 sets  
+    * A training set and a testing set, **each of the images numbered and named the same.**
+  * The metadata about the images were also in pieces, this time in 3 sets.  
+    * A set holding the labels
+    * A set holding the training metadata, in a specific order to line up with the image names of the training images
+    * A set holding the testing metadata, in a specific order to line up with the image names of the training images
+  * The metadata is writting in an old programming language, _Matlab_
+  * The matadata is not in a format such as a CSV file, a Panda's DataFrame, or any other format we were familiar with.
+  * The capture of the metadata needed to be converted from MatLab to a DataFrame, loaded into a Database.
+> The process to perform this task was in 2 parts. 
+  * Part 1 (This is shown in _stanford_readdata.ipynb_)
+    * Conversion of the MatLab metadata files into Pandas DataFrames  
+    * Conversion of the datatypes in the Dataframes to the correct datatypes  
+  * Part 2 The process to move the contents of the Pandas DataFrames into the PostgreSQL database was using the following:
+    * Using sqlalchemy's create_engine library
+    ```
+    # Load labels dataframe into lables table
+    import psycopg2
+    from sqlalchemy import create_engine
+    db_string = f"postgresql://postgres:{db_password}@cars.{aws_url}:5432/cars"
+    engine = create_engine(db_string)
+    ```
+    * For each of the DataFrames we created in _stanford_readdata.ipynb_, I took the dataframe and used the to_sql function.
+    ```
+    labels.to_sql(name='labels', con=engine, if_exists='append',index=True)
+    df_train.to_sql(name='images', con=engine, if_exists='append',index=True)
+    df_test.to_sql(name='images', con=engine, if_exists='append',index=False)
+    ```
 
 ### Description of the analysis phase of the project:
 > We will be evaluating the images to determine what features we want to capture for the dataset and then store into database tables.
@@ -95,7 +124,7 @@ TBD
   * _Storage Bucket:_ <a href='http://cars-traindataset.s3-website.us-east-2.amazonaws.com'> Training Set </a>  
   * _Storage Bucket:_ <a href='http://cars-testdataset.s3-website.us-east-2.amazonaws.com'> Testing Set </a>  
 > Database Schema
-<img src='images/ERD_CarsDB.png' width=75% height=50% />
+<img src='images/ERD_CarsDB.png' width=55% height=40% />
 
  * _Creation Scripts:_ Located in **DB Images/create_tables.sql**  
 ---  
@@ -110,7 +139,7 @@ TBD
  * _Sample Data_: Located at **DBTableExamples.txt**
 ---
 > Database Example:
-<img src='images/DBTableExamples.png' width=75% height=75% />
+<img src='images/DBTableExamples.png' width=55% height=40% />
 
 #### Machine Learning Models
 > SciKitLearn is the ML library we'll be using to create a classifier. This will determine if an image contains a vehicle or not and what type of vehicle it is.  
