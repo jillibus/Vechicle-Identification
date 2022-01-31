@@ -81,10 +81,10 @@ _After Course Completion_
   * The metadata about the images were also in pieces, this time in 3 sets.  
     * A set holding the labels
     * A set holding the training metadata, in a specific order to line up with the image names of the training images
-    * A set holding the testing metadata, in a specific order to line up with the image names of the training images
+    * A set holding the testing metadata, in a specific order to line up with the image names of the testing images
   * The metadata is writting in an old programming language, _Matlab_
   * The matadata is not in a format such as a CSV file, a Panda's DataFrame, or any other format we were familiar with.
-  * The capture of the metadata needed to be converted from MatLab to a DataFrame, loaded into a Database.
+  * The capture of the metadata needed to be converted from MatLab to a DataFrame, then loaded into a Database.
 > The process to perform this task was in 2 parts. 
   * Part 1 (This is shown in _stanford_readdata.ipynb_)
     * Conversion of the MatLab metadata files into Pandas DataFrames  
