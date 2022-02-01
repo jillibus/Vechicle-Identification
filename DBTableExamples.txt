@@ -1,0 +1,54 @@
+Database:  cars
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Table: labels
+Columns:
+*  index	  			serial	
+*  class_name	varchar(100)
+
+primary key index
+
+Examples:
+index	class											    
+=====	======================	
+999		non-vehicle
+0			AM General Hummer SUV 2000
+1			Acura RL Sedan 2012
+2			Acura TL Sedan 2012
+3			Acura TL Type-S 2018
+4			Acura TSX Sedan 2012
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Table: images
+Columns:
+*	index 		serial
+*	bbox_x1 	int
+*	bbox_y1 	int
+*	bbox_x2 	int
+*	bbox_y2 	int
+*	class		int
+*	fname		varchar(150)
+
+primary key index
+foreign key (class) references labels (index)
+
+Examples:
+
+index	bbox_x1	bbox_y1	bbox_x2	bbox_y2	class	fname
+=====	=======	=======	=======	=======	=====	===========================
+0			39			116			569			375			13		cars-traindataset/00001.jpg
+1			36			116			868			587			2			cars-traindataset/00002.jpg
+2			85			109			601			381			90		cars-traindataset/00003.jpg
+3			621			393			1484			1096			133		cars-traindataset/00004.jpg
+4			14			36			133			99			105		cars-traindataset/00005.jpg
+...
+8145		30			52			246			147			NULL	cars-testdataset/00001.jpg
+8146		100			19			576			203			NULL	cars-testdataset/00002.jpg
+8147		51			105			968			659			NULL	cars-testdataset/00003.jpg
+8148		67			84			581			407			NULL	cars-testdataset/00004.jpg
+8149		140			151			593			339			NULL	cars-testdataset/00005.jpg
+
+
+
+
