@@ -120,7 +120,7 @@ _After Course Completion_
   *  _Database Instance ID:_ cars 
   *  _Database Link:_ <a href='http://cars.ckxsklg24qnv.us-east-2.rds.amazonaws.com/'> Cars DB </a>  
   *  _Database Port:_ 5432  
-> We will be using AWS R3 storge for the images.   
+> We will be using AWS R3 storage for the images.   
   * _Storage Bucket:_ <a href='http://cars-traindataset.s3-website.us-east-2.amazonaws.com'> Training Set </a>  
   * _Storage Bucket:_ <a href='http://cars-testdataset.s3-website.us-east-2.amazonaws.com'> Testing Set </a>  
 > Database Schema
