@@ -156,11 +156,11 @@ _After Course Completion_
 
 ## Summary
 > Recommendation for future analysis:
-TBD
+Increased timeframe for working with the data and building and training the model.
+
 
 > Anything the team would have done differently:
 TBD
-
 
 Thank you for your time for reading our project details, please let us know if you need any additional information.  
 Harsh Patel, Jill Hughes, Logan Murphy, Mihai Anghel
