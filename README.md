@@ -4,7 +4,7 @@
 
 # Overview
 
-#### Welcome to  <img src='images/CTRL-ALT-DEFEAT-SMALL_edited.png' width=12% height=10% />     GitHub Machine Learning project page. 
+#### Welcome to the <img src='images/CTRL-ALT-DEFEAT-SMALL_edited.png' width=12% height=10% />     GitHub Machine Learning project page. 
 
 ##### This is our final team project for the <a href="https://bootcamp.unc.edu/data/">**UNC Chapel Hill Data Analytics Course**</a> 
 
@@ -31,18 +31,20 @@ CTRL ALT DEFEAT
 ### Communication Protocols
 
 * The team will regularly use <a href="https://slack.com/"> **Slack** </a> :speech_balloon: for communicating updates and sharing of links/files   
-* The team will meet twice a week, after class, and once more during the weekend for final updates.   
+* The team will meet three (3) times a week to work on the project.
+	* Two times during designated class time to work on the project. Teammates are welcome to remain in breakout rooms after class to continue working. 
+	* A third final time to work on remaining tasks before submitting deliverables will be made during the weekend (Sat/Sun depending on schedules) each week.    
 * Any project emergency communication will be via phone :thumbsup:  
 
-## Selected Project Topic
+# Selected Project Topic
 
-### Vehicle Image Recognition
+#### <a href="https://github.com/jillibus/Vehicle-Identification/blob/main/Vehicle%20Identification%20Final%20-%20Deliverable%202.pdf"> Vehicle Image Recognition </a>
 
-## Business Applications for Vehicle Image Recognition
+### Business Applications for Vehicle Image Recognition
 
 > The topic at hand was selected for its potential use in intelligent transportation applications that focus on monitoring of traffic flow, automated parking systems, and security enforcement.  Adding physical characteristics, with existing systems that track traffic patterns that include type, velocity, direction and position, (Vehicular Ad Hoc Networks - VANETs), would advance the information provided for use in additional applications.
 
-## Source Data Chosen
+### Source Data Chosen
 
 > The Cars dataset contains *16,185* images of *196* classes of cars. The data is split into *8,144* training images and *8,041* testing images, where each class has been split roughly in a 50-50 split. Classes are typically at the level of Make, Model, Year, e.g. **__2012 Tesla Model S__** or **__2012 BMW M3 coupe__**.
 
@@ -53,11 +55,11 @@ CTRL ALT DEFEAT
   Jonathan Krause, Michael Stark, Jia Deng, Li Fei-Fei    
   4th IEEE Workshop on 3D Representation and Recognition, at ICCV 2013 (3dRR-13). Sydney, Australia. Dec. 8, 2013.   
   
-## Project Goal
+### Project Goal
 
 > Our Project Goal is to create an _Image Recognition Model_, with the simplest form of the model recognizing whether or not a vehicle is present in a photo from our data set. 
 
-## Future Goals
+### Future Goals
 _After Course Completion_
 > Our next goal we will build on the model so that it can determine whether or not the vehicle in the image is a BMW or another brand of vehicle.
 
@@ -65,12 +67,13 @@ _After Course Completion_
 
 > The final iteration will have a multidude of potential real world uses such as amber alert and law enforcement application integration. 
 
-## **Questions the team hopes to answer with the data:**
- 
-> Can the model correctly predict if there is a vehicle in the image?
+### **Questions the team hopes to answer with the data:**
+1. Can we take a dataset containing thousands of images and create a model using machine learning in order to identify whether or not a vehicle is present in an image?
+
+2. Can our prototype machine learning model identify the make, model and year of a targeted vehicle in an image?
 
 ---
-## GOAL:   
+# GOAL:   
 > Create a Image Recognition Model, using the simplest form of the model, that will recognize whether or not a vehicle is present in a photo from our data set. 
 
 ### Description of the data exploration phase of the project:
