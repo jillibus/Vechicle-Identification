@@ -83,37 +83,36 @@ The following thought process outlines the steps that were taken to get things c
 
 ### Loading in the dataset
 
-  **A)** In order to be able and load & read the dataset metadata file :arrow_right: created Python File - <a href="https://github.com/jillibus/Vehicle-Identification/blob/manghel/stanford_readdata.ipynb"> stanford_readdata.ipynb </a>
+**A)** In order to be able and load & read the dataset metadata file :arrow_right: created Python File - <a href="https://github.com/jillibus/Vehicle-Identification/blob/manghel/stanford_readdata.ipynb"> stanford_readdata.ipynb </a>
     
-    * Created DataFrame **labels** for definition of types of cars in the dataset.
-    <img src='images/df_labels.png' width=60% height=45%/>
+	*Created DataFrame **labels** for definition of types of cars in the dataset.
+	<img src='images/df_labels.png' width=60% height=45%/>
 
-    * Created DataFrame **train** for definition of types of cars in training dataset. 
-    <img src='images/df_train.png' width=60% height=45%/>
+	*Created DataFrame **train** for definition of types of cars in training dataset. 
+	<img src='images/df_train.png' width=60% height=45%/>
 
-    *Merging labels*  
-    <img src='images/df_train_w_labels.png' width=60% height=45%/>
+	*Merging labels*  
+    	<img src='images/df_train_w_labels.png' width=60% height=45%/>
 
-    * Created DataFrame **test** for definition of types of cars in testing dataset. 
-    <img src='images/df_test.png' width=60% height=45%/>
-  
-  **B)** Create AWS Buckets to hold images from both the cars-train and cars-test datasets
+    	*Created DataFrame **test** for definition of types of cars in testing dataset. 
+    	<img src='images/df_test.png' width=60% height=45%/>
+
+**B)** Create AWS Buckets to hold images from both the cars-train and cars-test datasets
     
-    * Need image from AWS (screenshot will do fine) with the two buckets.   
+	*Need image from AWS (screenshot will do fine) with the two buckets.   
 
-  **C)** Creation of AWS PostgreSQL Database 
+**C)** Creation of AWS PostgreSQL Database 
     
-    <img src='images/Database.png'/>	 
+	<img src='images/Database.png'/>	 
     
-    * Creation of tables - lables & images in cars database for dataset
+    	*Creation of tables - lables & images in cars database for dataset
+	*Population of tables - from DataFrames, labels, df_train, df_test
 
-    * Population of tables - from DataFrames, labels, df_train, df_test
-
-    <img src='images/class_count_train.png'/>
-
-    <img src='images/Training-Dataset-Loaded.png'/>
-
-    <img src='images/Image-Table.png'/>
+	<img src='images/class_count_train.png'/>
+	
+	<img src='images/Training-Dataset-Loaded.png'/>
+	
+	<img src='images/Image-Table.png'/>
 
 ### ~~Loading in the dataset~~
 
