@@ -142,10 +142,10 @@ _After Course Completion_
 <img src='images/DBTableExamples.png' width=55% height=40% />
 
 #### Machine Learning Models
-> SciKitLearn is the ML library we'll be using to create a classifier. This will determine if an image contains a vehicle or not and what type of vehicle it is.  
+> SciKitLearn is the ML library we'll be using to create a classifier. This will determine if an image contains a vehicle or not and what make the vehicle is.  
 > TensorFlow will be the application and library where we will be using and testing the Neural Networks Models.
 > The Model we will use is Sequential, adding hidden layers with activation set to _reLU_, using the optimizer _adam_ and _accuracy_ metrics.    
-> The original training set is a 50-50 split of data, we will be adjusting this as future models are introduced.    
+> The original data set is a 50-50 split of data, we will be adjusting this as future models are introduced.    
 
 ### Dashboard
 > In addition to using a Flask template, we will also integrate D3.js for a fully functioning and interactive dashboard.   
@@ -160,6 +160,7 @@ TBD
 
 > Anything the team would have done differently:
 TBD
+
 
 Thank you for your time for reading our project details, please let us know if you need any additional information.  
 Harsh Patel, Jill Hughes, Logan Murphy, Mihai Anghel
