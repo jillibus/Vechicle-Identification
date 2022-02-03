@@ -78,7 +78,18 @@ _After Course Completion_
 
 ### Description of the data exploration phase of the project:
 
-> The data exploration phase of this project was a challenge for our team.  The data from Stanford University came in pieces.  
+> The data exploration phase of this project was a challenge for our team. The raw data from Stanford University came in MatLab format, which had to be processed for analysis in Pandas Dataframe.
+The following thought process outlines the steps that were taken to get things crackalakin'
+
+  * In order to be able and load & read the dataset metadata file :arrow_right: created Python File - <a href="https://github.com/jillibus/Vehicle-Identification/blob/manghel/stanford_readdata.ipynb"> stanford_readdata.ipynb </a>
+    * Created DataFrame - labels for definition of types of cars in the dataset.
+    <img src=https://github.com/jillibus/Vehicle-Identification/blob/manghel/images/df_labels.png?raw=true />
+
+
+
+
+
+  
   * The images were divided into 2 sets  
     * A training set and a testing set, **each of the images numbered and named the same.**
   * The metadata about the images were also in pieces, this time in 3 sets.  
