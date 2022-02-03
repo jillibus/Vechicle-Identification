@@ -81,9 +81,18 @@ _After Course Completion_
 > The data exploration phase of this project was a challenge for our team. The raw data from Stanford University came in MatLab format, which had to be processed for analysis in Pandas Dataframe.
 The following thought process outlines the steps that were taken to get things crackalakin'
 
-  * In order to be able and load & read the dataset metadata file :arrow_right: created Python File - <a href="https://github.com/jillibus/Vehicle-Identification/blob/manghel/stanford_readdata.ipynb"> stanford_readdata.ipynb </a>
-    * Created DataFrame - labels for definition of types of cars in the dataset.
+  A) In order to be able and load & read the dataset metadata file :arrow_right: created Python File - <a href="https://github.com/jillibus/Vehicle-Identification/blob/manghel/stanford_readdata.ipynb"> stanford_readdata.ipynb </a>
+    * Created DataFrame **labels** for definition of types of cars in the dataset.
     <img src='images/df_labels.png' width=60% height=45%/>
+    * Created DataFrame **train** for definition of types of cars in training dataset. 
+    <img src='images/df_train.png' width=60% height=45%/>
+    *With labels*  
+    <img src='images/df_train_w_labels.png' width=60% height=45%/>
+    * Created DataFrame **test** for definition of types of cars in testing dataset. 
+    <img src='images/df_test.png' width=60% height=45%/>
+  
+  B) Create AWS Buckets to hold images from both the cars-train and cars-test datasets
+    * Need image from AWS (screenshot will do fine) with the two buckets.   
 
 
 
