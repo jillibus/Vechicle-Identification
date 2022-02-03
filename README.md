@@ -91,11 +91,11 @@ The following thought process outlines the steps that were taken to get things c
 * Created DataFrame **train** for definition of types of cars in training dataset. 
 <img src='images/df_train.png' width=60% height=45%/>
 
-* *Merging labels*  
-    	<img src='images/df_train_w_labels.png' width=60% height=45%/>
+* *Merging labels*
+<img src='images/df_train_w_labels.png' width=60% height=45%/>
 
 * Created DataFrame **test** for definition of types of cars in testing dataset. 
-    	<img src='images/df_test.png' width=60% height=45%/>
+<img src='images/df_test.png' width=60% height=45%/>
 
 **B)** Create AWS Buckets to hold images from both the cars-train and cars-test datasets
     
@@ -103,7 +103,7 @@ The following thought process outlines the steps that were taken to get things c
 
 **C)** Creation of AWS PostgreSQL Database 
     
-	<img src='images/Database.png'/>	 
+<img src='images/Database.png'/>	 
     
 * Creation of tables - lables & images in cars database for dataset
 * Population of tables - from DataFrames, labels, df_train, df_test
