@@ -120,7 +120,7 @@ _After Course Completion_
   *  _Database Instance ID:_ cars 
   *  _Database Link:_ <a href='http://cars.ckxsklg24qnv.us-east-2.rds.amazonaws.com/'> Cars DB </a>  
   *  _Database Port:_ 5432  
-> We will be using AWS R3 storge for the images.   
+> We will be using AWS R3 storage for the images.   
   * _Storage Bucket:_ <a href='http://cars-traindataset.s3-website.us-east-2.amazonaws.com'> Training Set </a>  
   * _Storage Bucket:_ <a href='http://cars-testdataset.s3-website.us-east-2.amazonaws.com'> Testing Set </a>  
 > Database Schema
@@ -142,10 +142,10 @@ _After Course Completion_
 <img src='images/DBTableExamples.png' width=55% height=40% />
 
 #### Machine Learning Models
-> SciKitLearn is the ML library we'll be using to create a classifier. This will determine if an image contains a vehicle or not and what type of vehicle it is.  
+> SciKitLearn is the ML library we'll be using to create a classifier. This will determine if an image contains a vehicle or not and what make the vehicle is.  
 > TensorFlow will be the application and library where we will be using and testing the Neural Networks Models.
 > The Model we will use is Sequential, adding hidden layers with activation set to _reLU_, using the optimizer _adam_ and _accuracy_ metrics.    
-> The original training set is a 50-50 split of data, we will be adjusting this as future models are introduced.    
+> The original data set is a 50-50 split of data, we will be adjusting this as future models are introduced.    
 
 ### Dashboard
 > In addition to using a Flask template, we will also integrate D3.js for a fully functioning and interactive dashboard.   
@@ -156,7 +156,8 @@ _After Course Completion_
 
 ## Summary
 > Recommendation for future analysis:
-TBD
+Increased timeframe for working with the data and building and training the model.
+
 
 > Anything the team would have done differently:
 TBD
