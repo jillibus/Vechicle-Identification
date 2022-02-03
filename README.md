@@ -83,7 +83,7 @@ The following thought process outlines the steps that were taken to get things c
 
   * In order to be able and load & read the dataset metadata file :arrow_right: created Python File - <a href="https://github.com/jillibus/Vehicle-Identification/blob/manghel/stanford_readdata.ipynb"> stanford_readdata.ipynb </a>
     * Created DataFrame - labels for definition of types of cars in the dataset.
-    <img src=https://github.com/jillibus/Vehicle-Identification/blob/manghel/images/df_labels.png?raw=true />
+    <img src='images/df_labels.png' width=60% height=45%/>
 
 
 
