@@ -38,7 +38,7 @@ CTRL ALT DEFEAT
 
 # Selected Project Topic
 
-#### <a href="https://github.com/jillibus/Vehicle-Identification/blob/main/Vehicle%20Identification%20Final%20-%20Deliverable%202.pdf"> Vehicle Image Recognition </a>
+#### <a href="https://github.com/jillibus/Vehicle-Identification/blob/main/Vehicle Identification Final - v2 - Deliverable 2.pdf"> Vehicle Image Recognition </a>
 
 ### Business Applications for Vehicle Image Recognition
 
@@ -200,10 +200,7 @@ The following thought process outlines the steps that were taken to get things c
 <img src='images/DBTableExamples.png' width=55% height=40% />
 
 #### Machine Learning Models
-> SciKitLearn is the ML library we'll be using to create a classifier. This will determine if an image contains a vehicle or not and what make the vehicle is.  
-> TensorFlow will be the application and library where we will be using and testing the Neural Networks Models.
-> The Model we will use is Sequential, adding hidden layers with activation set to _reLU_, using the optimizer _adam_ and _accuracy_ metrics.    
-> The original data set is a 50-50 split of data, we will be adjusting this as future models are introduced.    
+> This model uses multiple layers to make the model boy rescale the images and be able to identify them. First the images are rescaled from 1 to 255 to 0 to 1 using a rescaling layer. This is to help speedup the model from using smaller numbers instead of larger numbers. The Conv2D layer creates a convolution kernel each time with the a size of the images being converted included in each layer. The MaxPooling2D layer that follows every Conv2D layer is primarily to down sample the detection of features in feature maps. This means that even if colors of pixels are slightly different they should be pooled togehter into the same groups for images such as car tail lights. The Dropout layer is to help data from overfitting by dropping out roughly 20% of all output units from the layer.  The Flatten layer is added to make certain that the tensor is reshaped to have a shape that is equal to the number of elements contained in tensor not including the batch dimension. Finally the Dense layer is a fully connected layer that is made to connect the model and use the 'relu' activation function. This entire model isn't tuned for high accuracy and is more of a general model made for image recognition and categorization.
 
 ### Dashboard
 > In addition to using a Flask template, we will also integrate D3.js for a fully functioning and interactive dashboard.   
