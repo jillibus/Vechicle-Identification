@@ -11,7 +11,7 @@ Neural Networks are generally more popular in usage for image processing in mach
 
 - Has a built-in API that allows developers to directly link a machine learning model using TensorFlow to an already deployed website without usage of outside programs.
 
-- Easy visuzliation of training data with Tensorboard
+- Easy visualization of training data with Tensorboard
 
 - Not a very good debugging method available.
 
@@ -35,3 +35,4 @@ Generally Tensorflow has an easier time for the developer to both create and imp
 
 #### Model Information
 
+This model uses multiple layers to make the model boy rescale the images and be able to identify them. First the images are rescaled from 1 to 255 to 0 to 1 using a rescaling layer. This is to help speedup the model from using smaller numbers instead of larger numbers. The Conv2D layer creates a convolution kernel each time with the a size of the images being converted included in each layer. The MaxPooling2D layer that follows every Conv2D layer is primarily to down sample the detection of features in feature maps. This means that even if colors of pixels are slightly different they should be pooled togehter into the same groups for images such as car tail lights. The Dropout layer is to help data from overfitting by dropping out roughly 20% of all output units from the layer.  The Flatten layer is added to make certain that the tensor is reshaped to have a shape that is equal to the number of elements contained in tensor not including the batch dimension. Finally the Dense layer is a fully connected layer that is made to connect the model and use the 'relu' activation function. This entire model isn't tuned for high accuracy and is more of a general model made for image recognition and categorization.
