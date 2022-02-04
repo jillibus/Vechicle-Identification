@@ -83,7 +83,12 @@ The following thought process outlines the steps that were taken to get things c
 
 ### Loading in the dataset
 
+* Due to the metadata being written in *Matlab* and not a familiar format that we've worked with as a CSV, it was converted into a DataFrame & then loaded into our AWS Database. 
+
 **A)** In order to be able and load & read the dataset metadata file :arrow_right: created Python File - <a href="https://github.com/jillibus/Vehicle-Identification/blob/manghel/stanford_readdata.ipynb"> stanford_readdata.ipynb </a>
+
+* The images were divided into two (2) sets, a training and testing one. Each of the images were numbered and named the same. 
+* The metadata  was split into three (3) different pieces, a lables, training & testing set. These were created into separate dataframes as can be seen below:
 
 * Created DataFrame **labels** for definition of types of cars in the dataset.
 <img src='images/df_labels.png' width=60% height=45%/>
@@ -99,37 +104,57 @@ The following thought process outlines the steps that were taken to get things c
 
 **B)** Create AWS Buckets to hold images from both the cars-train and cars-test datasets
     
-* Need image from AWS (screenshot will do fine) with the two buckets.   
+<img src='images/Buckets.png' />   
 
 **C)** Creation of AWS PostgreSQL Database 
     
 <img src='images/Database.png'/>	 
+
+* The process to move the contents of the Pandas DataFrames into the PostgreSQL database was using the following:
+    * Using sqlalchemy's create_engine library
+    ```
+    # Load labels dataframe into lables table
+    import psycopg2
+    from sqlalchemy import create_engine
+    db_string = f"postgresql://postgres:{db_password}@cars.{aws_url}:5432/cars"
+    engine = create_engine(db_string)
+    ```
+    * For each of the DataFrames we created in _stanford_readdata.ipynb_, I took the dataframe and used the to_sql function.
+    ```
+    labels.to_sql(name='labels', con=engine, if_exists='append',index=True)
+    df_train.to_sql(name='images', con=engine, if_exists='append',index=True)
+    df_test.to_sql(name='images', con=engine, if_exists='append',index=False)
+    ```
     
 * Creation of tables - lables & images in cars database for dataset
 * Population of tables - from DataFrames, labels, df_train, df_test
 
-<img src='images/class_count_train.png'/>
+<img src='images/class_count_train.png' width="722" height="460"/>
 	
-<img src='images/Training-Dataset-Loaded.png'/>
+<img src='images/Training-Dataset-Loaded.png' width="722" height="460"/>
 	
-<img src='images/Image-Table.png'/>
+<img src='images/Image-Table.png' width="722" height="460"/>
 
-### ~~Loading in the dataset~~
+### Running Train/Test Machine Model on Data Set
 
+#### Decision-making process & explanation of model choice
+> Neural Networks vs. Random Forest Classifier
+
+* Neural Networks are generally more popular in usage for image processing in machine learning model (MLM). The two major packages considered for this project were **TensorFlow** and **Pytorch**. Both packages are very succesful at running models on image classification. However, our decision to chose was to go with <a href="https://www.tensorflow.org/"> TensorFlow </a>. 
+
+* Apart from being more familiar with TensorFlow from previous experience, this model has a few other features which influenced our decision over Pytorch:
+  * Built-in API allowing developers to directly link a model to an already deployed website without outsourcing programs.
+  * Clear visualization for training data with Tensorboard.
+  * No need for third party programs for visualization. 
+
+* It is important to keep in mind that like any model, TensorFlow also has weaknesses which our team had to take into consideration:
+  * Not a very efficient debugging method available.
+  * More difficult to make quick changes to the model as it requires recreation from the beginning and retraining using any newly changed data. 
   
-  * The images were divided into 2 sets  
-    * A training set and a testing set, **each of the images numbered and named the same.**
-  * The metadata about the images were also in pieces, this time in 3 sets.  
-    * A set holding the labels
-    * A set holding the training metadata, in a specific order to line up with the image names of the training images
-    * A set holding the testing metadata, in a specific order to line up with the image names of the testing images
-  * The metadata is writting in an old programming language, _Matlab_
-  * The matadata is not in a format such as a CSV file, a Panda's DataFrame, or any other format we were familiar with.
-  * The capture of the metadata needed to be converted from MatLab to a DataFrame, then loaded into a Database.
-> The process to perform this task was in 2 parts. 
-  * Part 1 (This is shown in _stanford_readdata.ipynb_)
-    * Conversion of the MatLab metadata files into Pandas DataFrames  
-    * Conversion of the datatypes in the Dataframes to the correct datatypes  
+> Generally, Tensorflow allows developers to create and implement a neural network easier, primarily due to its slightly more mature product than Pytorch. There are more visualization options with Tensorboard which allow developers to recognize issues with models faster. The built-in API is a huge advantage for client presentation, allowing direct deployment of TensorFlow models to client websites and applications with little interference to the actual website.  
+
+* Created DataFrame **labels** for definition of types of cars in the dataset. 
+
   * Part 2 The process to move the contents of the Pandas DataFrames into the PostgreSQL database was using the following:
     * Using sqlalchemy's create_engine library
     ```
