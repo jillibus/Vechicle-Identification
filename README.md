@@ -79,7 +79,7 @@ _After Course Completion_
 ### Description of the data exploration analysis phase of the project:
 
 > The data exploration phase of this project was a challenge for our team. The raw data from Stanford University came in MatLab format, which had to be processed for analysis in Pandas DataFrame. We will be evaluating the images to determine what features we want to capture for the dataset and then store into database tables.
-The following thought process outlines the steps that were taken to get things crackalakin'
+The following outlines the steps that were taken to get things crackalakin'
 
 ### Loading in the dataset
 
