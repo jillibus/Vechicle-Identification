@@ -4,7 +4,7 @@
 
 # Overview
 
-#### Welcome to  <img src='images/CTRL-ALT-DEFEAT-SMALL_edited.png' width=12% height=10% />     GitHub Machine Learning project page. 
+#### Welcome to the <img src='images/CTRL-ALT-DEFEAT-SMALL_edited.png' width=12% height=10% />     GitHub Machine Learning project page. 
 
 ##### This is our final team project for the <a href="https://bootcamp.unc.edu/data/">**UNC Chapel Hill Data Analytics Course**</a> 
 
@@ -31,18 +31,20 @@ CTRL ALT DEFEAT
 ### Communication Protocols
 
 * The team will regularly use <a href="https://slack.com/"> **Slack** </a> :speech_balloon: for communicating updates and sharing of links/files   
-* The team will meet twice a week, after class, and once more during the weekend for final updates.   
+* The team will meet three (3) times a week to work on the project.
+	* Two times during designated class time to work on the project. Teammates are welcome to remain in breakout rooms after class to continue working. 
+	* A third final time to work on remaining tasks before submitting deliverables will be made during the weekend (Sat/Sun depending on schedules) each week.    
 * Any project emergency communication will be via phone :thumbsup:  
 
-## Selected Project Topic
+# Selected Project Topic
 
-### Vehicle Image Recognition
+#### <a href="https://github.com/jillibus/Vehicle-Identification/blob/main/Vehicle%20Identification%20Final%20-%20Deliverable%202.pdf"> Vehicle Image Recognition </a>
 
-## Business Applications for Vehicle Image Recognition
+### Business Applications for Vehicle Image Recognition
 
 > The topic at hand was selected for its potential use in intelligent transportation applications that focus on monitoring of traffic flow, automated parking systems, and security enforcement.  Adding physical characteristics, with existing systems that track traffic patterns that include type, velocity, direction and position, (Vehicular Ad Hoc Networks - VANETs), would advance the information provided for use in additional applications.
 
-## Source Data Chosen
+### Source Data Chosen
 
 > The Cars dataset contains *16,185* images of *196* classes of cars. The data is split into *8,144* training images and *8,041* testing images, where each class has been split roughly in a 50-50 split. Classes are typically at the level of Make, Model, Year, e.g. **__2012 Tesla Model S__** or **__2012 BMW M3 coupe__**.
 
@@ -53,11 +55,11 @@ CTRL ALT DEFEAT
   Jonathan Krause, Michael Stark, Jia Deng, Li Fei-Fei    
   4th IEEE Workshop on 3D Representation and Recognition, at ICCV 2013 (3dRR-13). Sydney, Australia. Dec. 8, 2013.   
   
-## Project Goal
+### Project Goal
 
 > Our Project Goal is to create an _Image Recognition Model_, with the simplest form of the model recognizing whether or not a vehicle is present in a photo from our data set. 
 
-## Future Goals
+### Future Goals
 _After Course Completion_
 > Our next goal we will build on the model so that it can determine whether or not the vehicle in the image is a BMW or another brand of vehicle.
 
@@ -65,30 +67,94 @@ _After Course Completion_
 
 > The final iteration will have a multidude of potential real world uses such as amber alert and law enforcement application integration. 
 
-## **Questions the team hopes to answer with the data:**
- 
-> Can the model correctly predict if there is a vehicle in the image?
+### **Questions the team hopes to answer with the data:**
+1. Can we take a dataset containing thousands of images and create a model using machine learning in order to identify whether or not a vehicle is present in an image?
+
+2. Can our prototype machine learning model identify the make, model and year of a targeted vehicle in an image?
 
 ---
-## GOAL:   
+# GOAL:   
 > Create a Image Recognition Model, using the simplest form of the model, that will recognize whether or not a vehicle is present in a photo from our data set. 
 
-### Description of the data exploration phase of the project:
+### Description of the data exploration analysis phase of the project:
 
-> The data exploration phase of this project was a challenge for our team.  The data from Stanford University came in pieces.  
-  * The images were divided into 2 sets  
-    * A training set and a testing set, **each of the images numbered and named the same.**
-  * The metadata about the images were also in pieces, this time in 3 sets.  
-    * A set holding the labels
-    * A set holding the training metadata, in a specific order to line up with the image names of the training images
-    * A set holding the testing metadata, in a specific order to line up with the image names of the testing images
-  * The metadata is writting in an old programming language, _Matlab_
-  * The matadata is not in a format such as a CSV file, a Panda's DataFrame, or any other format we were familiar with.
-  * The capture of the metadata needed to be converted from MatLab to a DataFrame, then loaded into a Database.
-> The process to perform this task was in 2 parts. 
-  * Part 1 (This is shown in _stanford_readdata.ipynb_)
-    * Conversion of the MatLab metadata files into Pandas DataFrames  
-    * Conversion of the datatypes in the Dataframes to the correct datatypes  
+> The data exploration phase of this project was a challenge for our team. The raw data from Stanford University came in MatLab format, which had to be processed for analysis in Pandas Dataframe. We will be evaluating the images to determine what features we want to capture for the dataset and then store into database tables.
+The following thought process outlines the steps that were taken to get things crackalakin'
+
+### Loading in the dataset
+
+* Due to the metadata being written in *Matlab* and not a familiar format that we've worked with as a CSV, it was converted into a DataFrame & then loaded into our AWS Database. 
+
+**A)** In order to be able and load & read the dataset metadata file :arrow_right: created Python File - <a href="https://github.com/jillibus/Vehicle-Identification/blob/manghel/stanford_readdata.ipynb"> stanford_readdata.ipynb </a>
+
+* The images were divided into two (2) sets, a training and testing one. Each of the images were numbered and named the same. 
+* The metadata  was split into three (3) different pieces, a lables, training & testing set. These were created into separate dataframes as can be seen below:
+
+* Created DataFrame **labels** for definition of types of cars in the dataset.
+<img src='images/df_labels.png' width=60% height=45%/>
+
+* Created DataFrame **train** for definition of types of cars in training dataset. 
+<img src='images/df_train.png' width=60% height=45%/>
+
+* *Merging labels*
+<img src='images/df_train_w_labels.png' width=60% height=45%/>
+
+* Created DataFrame **test** for definition of types of cars in testing dataset. 
+<img src='images/df_test.png' width=60% height=45%/>
+
+**B)** Create AWS Buckets to hold images from both the cars-train and cars-test datasets
+    
+<img src='images/Buckets.png' />   
+
+**C)** Creation of AWS PostgreSQL Database 
+    
+<img src='images/Database.png'/>	 
+
+* The process to move the contents of the Pandas DataFrames into the PostgreSQL database was using the following:
+    * Using sqlalchemy's create_engine library
+    ```
+    # Load labels dataframe into lables table
+    import psycopg2
+    from sqlalchemy import create_engine
+    db_string = f"postgresql://postgres:{db_password}@cars.{aws_url}:5432/cars"
+    engine = create_engine(db_string)
+    ```
+    * For each of the DataFrames we created in _stanford_readdata.ipynb_, I took the dataframe and used the to_sql function.
+    ```
+    labels.to_sql(name='labels', con=engine, if_exists='append',index=True)
+    df_train.to_sql(name='images', con=engine, if_exists='append',index=True)
+    df_test.to_sql(name='images', con=engine, if_exists='append',index=False)
+    ```
+    
+* Creation of tables - lables & images in cars database for dataset
+* Population of tables - from DataFrames, labels, df_train, df_test
+
+<img src='images/class_count_train.png' width="722" height="460"/>
+	
+<img src='images/Training-Dataset-Loaded.png' width="722" height="460"/>
+	
+<img src='images/Image-Table.png' width="722" height="460"/>
+
+### Running Train/Test Machine Model on Data Set
+
+#### Decision-making process & explanation of model choice
+> Neural Networks vs. Random Forest Classifier
+
+* Neural Networks are generally more popular in usage for image processing in machine learning model (MLM). The two major packages considered for this project were **TensorFlow** and **Pytorch**. Both packages are very succesful at running models on image classification. However, our decision to chose was to go with <a href="https://www.tensorflow.org/"> TensorFlow </a>. 
+
+* Apart from being more familiar with TensorFlow from previous experience, this model has a few other features which influenced our decision over Pytorch:
+  * Built-in API allowing developers to directly link a model to an already deployed website without outsourcing programs.
+  * Clear visualization for training data with Tensorboard.
+  * No need for third party programs for visualization. 
+
+* It is important to keep in mind that like any model, TensorFlow also has weaknesses which our team had to take into consideration:
+  * Not a very efficient debugging method available.
+  * More difficult to make quick changes to the model as it requires recreation from the beginning and retraining using any newly changed data. 
+  
+> Generally, Tensorflow allows developers to create and implement a neural network easier, primarily due to its slightly more mature product than Pytorch. There are more visualization options with Tensorboard which allow developers to recognize issues with models faster. The built-in API is a huge advantage for client presentation, allowing direct deployment of TensorFlow models to client websites and applications with little interference to the actual website.  
+
+* Created DataFrame **labels** for definition of types of cars in the dataset. 
+
   * Part 2 The process to move the contents of the Pandas DataFrames into the PostgreSQL database was using the following:
     * Using sqlalchemy's create_engine library
     ```
@@ -105,15 +171,7 @@ _After Course Completion_
     df_test.to_sql(name='images', con=engine, if_exists='append',index=False)
     ```
 
-### Description of the analysis phase of the project:
-> We will be evaluating the images to determine what features we want to capture for the dataset and then store into database tables.
-
-### Technologies, languages, tools, and algorithms used throughout the project:
-#### Data Cleaning and Analysis
-> Pandas will be used to clean the data and perform an exploratory analysis. 
-> Further analysis will be completed using Python.
-
-#### Database 
+#### Database Overview
 **Note: You will not be able to reach these links without proper authorization**
 > <a href="https://www.postgresql.org/"> Postgresql </a> is the database we intend to use hosted on <a href="https://aws.amazon.com/"> Amazon Web Services, AWS </a>.    
   *  _DB Name:_ cars  
