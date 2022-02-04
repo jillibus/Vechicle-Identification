@@ -76,9 +76,9 @@ _After Course Completion_
 # GOAL:   
 > Create a Image Recognition Model, using the simplest form of the model, that will recognize whether or not a vehicle is present in a photo from our data set. 
 
-### Description of the data exploration phase of the project:
+### Description of the data exploration analysis phase of the project:
 
-> The data exploration phase of this project was a challenge for our team. The raw data from Stanford University came in MatLab format, which had to be processed for analysis in Pandas Dataframe.
+> The data exploration phase of this project was a challenge for our team. The raw data from Stanford University came in MatLab format, which had to be processed for analysis in Pandas Dataframe. We will be evaluating the images to determine what features we want to capture for the dataset and then store into database tables.
 The following thought process outlines the steps that were taken to get things crackalakin'
 
 ### Loading in the dataset
@@ -171,15 +171,7 @@ The following thought process outlines the steps that were taken to get things c
     df_test.to_sql(name='images', con=engine, if_exists='append',index=False)
     ```
 
-### Description of the analysis phase of the project:
-> We will be evaluating the images to determine what features we want to capture for the dataset and then store into database tables.
-
-### Technologies, languages, tools, and algorithms used throughout the project:
-#### Data Cleaning and Analysis
-> Pandas will be used to clean the data and perform an exploratory analysis. 
-> Further analysis will be completed using Python.
-
-#### Database 
+#### Database Overview
 **Note: You will not be able to reach these links without proper authorization**
 > <a href="https://www.postgresql.org/"> Postgresql </a> is the database we intend to use hosted on <a href="https://aws.amazon.com/"> Amazon Web Services, AWS </a>.    
   *  _DB Name:_ cars  
