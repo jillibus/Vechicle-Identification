@@ -90,16 +90,16 @@ _After Course Completion_
 * The metadata  was split into three (3) different pieces, each for the labels, training and testing set. These were created into separate DataFrames as can be seen below:
 
 * Created DataFrame **labels** for definition of types of cars in the dataset.
-<img src='images/df_labels2.png' width=50% height=5%/>
+<img src='images/df_labels2.png' width=40% height=5%/>
 
 * Created DataFrame **train** for definition of types of cars in training dataset. 
-<img src='images/df_train2.png' width=50% height=35%/>
+<img src='images/df_train2.png' width=40% height=35%/>
 
 * *Merging labels*
-<img src='images/df_train3.png' width=50% height=35%/>
+<img src='images/df_train3.png' width=40% height=35%/>
 
 * Created DataFrame **test** for definition of types of cars in testing dataset. 
-<img src='images/df_test2.png' width=50% height=35%/>
+<img src='images/df_test2.png' width=40% height=35%/>
 
 **B)** Create AWS Buckets to hold images from both the cars-train and cars-test datasets
 _Note_: Uploaded the images to each AWS Bucket using AWS's upload tool.
