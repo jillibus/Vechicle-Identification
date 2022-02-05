@@ -82,8 +82,6 @@ _After Course Completion_
 
 > The following outlines the steps that were taken to get things crackalakin'
 
-### Loading in the dataset
-
 > Due to the metadata being written in *Matlab*, not a familiar format that we've worked with before, such as a CSV, it was converted into a DataFrame and then loaded into our AWS Database. 
 
 **A)** In order to be able to load and read the metadata files, we found an example of how to extract the data into from MatLab and convert it into Python DataFrames then we used sqlalchemy to upload the DataFrames into the PostgreSQL database. :arrow_right:  <a href="https://github.com/jillibus/Vehicle-Identification/blob/manghel/stanford_readdata.ipynb"> stanford_readdata.ipynb </a>
@@ -137,6 +135,7 @@ _Note_: Uploaded the images to each AWS Bucket using AWS's upload tool.
 <img src='images/Image-Table.png' width="722" height="460"/>
 
 **D)** Running Train/Test Machine Model on Data Set
+
 1) We start with a new Python file, here we start with the DataFrames, populated from the Cars Database,
 2) We send in the DataFrame, and loop through the Training data, pull the image from the location in the Dataframe
 3) Send it through our Model, and Train our Model.
@@ -168,6 +167,7 @@ _Note_: Uploaded the images to each AWS Bucket using AWS's upload tool.
 * Generally, Tensorflow allows developers to create and implement a neural network easier, primarily due to its slightly more mature product than Pytorch. There are more visualization options with Tensorboard which allow developers to recognize issues with models faster. The built-in API is a huge advantage for client presentation, allowing direct deployment of TensorFlow models to client websites and applications with little interference to the actual website.  
 
 ### Database
+
 **Note: You will not be able to reach these links without proper authorization**
 > <a href="https://www.postgresql.org/"> PostgreSQL </a> is the database we intend to use hosted on <a href="https://aws.amazon.com/"> Amazon Web Services, AWS </a>.    
   *  _DB Name:_ cars  
@@ -193,6 +193,7 @@ _Note_: Uploaded the images to each AWS Bucket using AWS's upload tool.
  * _Sample Data_: Located at **DBTableExamples.txt**
 ---
 > Database Example:
+
 <img src='images/DBTableExamples.png' width=45% height=30% />
 
 ### Dashboard
