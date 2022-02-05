@@ -32,8 +32,8 @@
 
 * The team will regularly use <a href="https://slack.com/"> **Slack** </a> :speech_balloon: for communicating updates and sharing of links/files   
 * The team will meet three (3) times a week to work on the project.
-	* Two times during designated class time to work on the project. Teammates are welcome to remain in breakout rooms after class to continue working.   
-	* A third final time to work on remaining tasks before submitting deliverables will be made during the weekend (Sat/Sun depending on schedules) each week.    
+  * Two times during designated class time to work on the project. Teammates are welcome to remain in breakout rooms after class to continue working.   
+  * A third final time to work on remaining tasks before submitting deliverables will be made during the weekend (Sat/Sun depending on schedules) each week.    
 * Any project emergency communication will be via phone :thumbsup:  
 
 # Selected Project Topic
@@ -78,39 +78,38 @@ _After Course Completion_
 
 ### Description of the data exploration analysis phase of the project:
 
-> The data exploration phase of this project was a challenge for our team. The raw data from Stanford University came in MatLab format, which had to be processed for analysis in Pandas DataFrame. We will be evaluating the images to determine what features we want to capture for the dataset and then store into database tables.
+> The data exploration phase of this project was a challenge for our team. The raw data from Stanford University came in MatLab format, which had to be processed for analysis in Pandas DataFrame. We will be evaluating the images to determine what features we want to capture for the dataset and then store into database tables.  
 
-#### The following outlines the steps that were taken to get things crackalakin'
-
-##### Loading in the dataset
+> The following outlines the steps that were taken to get things crackalakin'
 
 > Due to the metadata being written in *Matlab*, not a familiar format that we've worked with before, such as a CSV, it was converted into a DataFrame and then loaded into our AWS Database. 
 
-**A)** In order to be able to load and read the datasets metadata files, we :arrow_right: created a Python File to convert the MatLab files into Python DataFrames and then upload the DataFrames into the PostgreSQL database. - <a href="https://github.com/jillibus/Vehicle-Identification/blob/manghel/stanford_readdata.ipynb"> stanford_readdata.ipynb </a>
+**A)** In order to be able to load and read the metadata files, we found an example of how to extract the data into from MatLab and convert it into Python DataFrames then we used sqlalchemy to upload the DataFrames into the PostgreSQL database. :arrow_right:  <a href="https://github.com/jillibus/Vehicle-Identification/blob/manghel/stanford_readdata.ipynb"> stanford_readdata.ipynb </a>
 
 * The images were divided into two (2) sets, a training and testing one. Each of the images were numbered and named the same. 
-* The metadata  was split into three (3) different pieces, a lables, training and testing set. These were created into separate DataFrames as can be seen below:
+* The metadata  was split into three (3) different pieces, each for the labels, training and testing set. These were created into separate DataFrames as can be seen below:
 
 * Created DataFrame **labels** for definition of types of cars in the dataset.
-<img src='images/df_labels.png' width=60% height=45%/>
+<img src='images/df_labels.png' width=50% height=5%/>
 
 * Created DataFrame **train** for definition of types of cars in training dataset. 
-<img src='images/df_train.png' width=60% height=45%/>
+<img src='images/df_train.png' width=50% height=35%/>
 
 * *Merging labels*
-<img src='images/df_train_w_labels.png' width=60% height=45%/>
+<img src='images/df_train_w_labels.png' width=50% height=35%/>
 
 * Created DataFrame **test** for definition of types of cars in testing dataset. 
-<img src='images/df_test.png' width=60% height=45%/>
+<img src='images/df_test.png' width=50% height=35%/>
 
 **B)** Create AWS Buckets to hold images from both the cars-train and cars-test datasets
+_Note_: Uploaded the images to each AWS Bucket using AWS's upload tool.
     
-<img src='images/Buckets.png' />   
+<img src='images/Buckets.png' width=70% height=35%/>   
 
 **C)** Creation of AWS PostgreSQL Database 
     
-<img src='images/Database.png'/>	 
-
+<img src='images/Database.png' width=70% height=35%/>
+ 
 * The process to move the contents of the Pandas DataFrames into the PostgreSQL database was using the following:
     * Using sqlalchemy's create_engine library
     ```
@@ -126,8 +125,7 @@ _After Course Completion_
     df_train.to_sql(name='images', con=engine, if_exists='append',index=True)
     df_test.to_sql(name='images', con=engine, if_exists='append',index=False)
     ```
-    
-* Creation of tables - lables and images in cars database for dataset
+* Creation of tables - lables & images in cars database for dataset
 * Population of tables - from DataFrames, labels, df_train, df_test
 
 <img src='images/class_count_train.png' width="722" height="460"/>
@@ -137,20 +135,39 @@ _After Course Completion_
 <img src='images/Image-Table.png' width="722" height="460"/>
 
 **D)** Running Train/Test Machine Model on Data Set
-> The Machine Learning Models we ran for our Vehicle Identification are performed in multiple layers to make the model rescale the images and be able to identify them. 
 
+1) We start with a new Python file, here we start with the DataFrames, populated from the Cars Database,
+2) We send in the DataFrame, and loop through the Training data, pull the image from the location in the Dataframe
+3) Send it through our Model, and Train our Model.
+4) Once the Model is trained, we repeat the steps with our Testing data and determine our accuracy.
+
+**Our Model** Our model uses multiple layers to make the model rescale the images and be able to identify them. 
   * First the *images are rescaled* from 1 to 255 to 0 to 1 using a rescaling layer. This is to help speedup the model from using smaller numbers instead of larger numbers.   
   * The *Conv2D layer* creates a convolution kernel each time with the a size of the images being converted included in each layer.   
   * The *MaxPooling2D layer* that follows every Conv2D layer is primarily to down sample the detection of features in feature maps. This means that even if colors of pixels are slightly different they should be pooled togehter into the same groups for images such as car tail lights.   
   * The *Dropout layer* is to help data from overfitting by dropping out roughly 20% of all output units from the layer.    
   * The *Flatten layer* is added to make certain that the tensor is reshaped to have a shape that is equal to the number of elements contained in tensor not including the batch dimension.   
   * Finally the *Dense layer* is a fully connected layer that is made to connect the model and use the 'relu' activation function.   
-  * This entire model isn't tuned for high accuracy and is more of a general model made for image recognition and categorization.  
+  * This entire model isn't tuned for high accuracy and is more of a general model made for image recognition and categorization. 
 
-**E)** Creating an Application from the model for use.
-> Our final step for our project will be taking the Machine Learning Model, and saving it as a Pickle file. We then will use that in a Flask App so that a user can upload an image and the application will determine if there is a vehicle in the image.
+### Decision-making process and explanation of model choice
+> Neural Networks vs. Random Forest Classifier
 
-#### Database Overview
+* Neural Networks are generally more popular in usage for image processing in machine learning model (MLM). The two major packages considered for this project were **TensorFlow** and **Pytorch**. Both packages are very succesful at running models on image classification. However, our decision to chose was to go with <a href="https://www.tensorflow.org/"> TensorFlow </a>. 
+
+* Apart from being more familiar with TensorFlow from previous experience, this model has a few other features which influenced our decision over Pytorch:
+  * Built-in API allowing developers to directly link a model to an already deployed website without outsourcing programs.
+  * Clear visualization for training data with Tensorboard.
+  * No need for third party programs for visualization. 
+
+* It is important to keep in mind that like any model, TensorFlow also has weaknesses which our team had to take into consideration:
+  * Not a very efficient debugging method available.
+  * More difficult to make quick changes to the model as it requires recreation from the beginning and retraining using any newly changed data. 
+  
+* Generally, Tensorflow allows developers to create and implement a neural network easier, primarily due to its slightly more mature product than Pytorch. There are more visualization options with Tensorboard which allow developers to recognize issues with models faster. The built-in API is a huge advantage for client presentation, allowing direct deployment of TensorFlow models to client websites and applications with little interference to the actual website.  
+
+### Database
+
 **Note: You will not be able to reach these links without proper authorization**
 > <a href="https://www.postgresql.org/"> PostgreSQL </a> is the database we intend to use hosted on <a href="https://aws.amazon.com/"> Amazon Web Services, AWS </a>.    
   *  _DB Name:_ cars  
@@ -170,29 +187,14 @@ _After Course Completion_
 
 ---  
 > Database population:
-<img src='images/Label_count.png' width=50% height=30% />
-<img src='images/Image_count.png' width=50% height=30% />  
+<img src='images/Label_count.png' width=40% height=30% />
+<img src='images/Image_count.png' width=40% height=30% />  
 
  * _Sample Data_: Located at **DBTableExamples.txt**
 ---
 > Database Example:
-<img src='images/DBTableExamples.png' width=55% height=40% />
 
-#### Decision-making process and explanation of model choice
-> Neural Networks vs. Random Forest Classifier
-
-* Neural Networks are generally more popular in usage for image processing in machine learning model (MLM). The two major packages considered for this project were **TensorFlow** and **Pytorch**. Both packages are very succesful at running models on image classification. However, our decision to chose was to go with <a href="https://www.tensorflow.org/"> TensorFlow </a>. 
-
-* Apart from being more familiar with TensorFlow from previous experience, this model has a few other features which influenced our decision over Pytorch:
-  * Built-in API allowing developers to directly link a model to an already deployed website without outsourcing programs.
-  * Clear visualization for training data with Tensorboard.
-  * No need for third party programs for visualization. 
-
-* It is important to keep in mind that like any model, TensorFlow also has weaknesses which our team had to take into consideration:
-  * Not a very efficient debugging method available.
-  * More difficult to make quick changes to the model as it requires recreation from the beginning and retraining using any newly changed data. 
-  
-* Generally, Tensorflow allows developers to create and implement a neural network easier, primarily due to its slightly more mature product than Pytorch. There are more visualization options with Tensorboard which allow developers to recognize issues with models faster. The built-in API is a huge advantage for client presentation, allowing direct deployment of TensorFlow models to client websites and applications with little interference to the actual website.  
+<img src='images/DBTableExamples.png' width=45% height=30% />
 
 ### Dashboard
 > We will present our project in Tableau Dashboard for our final deliverable. 
