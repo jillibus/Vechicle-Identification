@@ -85,7 +85,7 @@ The following outlines the steps that were taken to get things crackalakin'
 
 * Due to the metadata being written in *Matlab*, not a familiar format that we've worked with before, such as a CSV, it was converted into a DataFrame and then loaded into our AWS Database. 
 
-**A)** In order to be able and load and read the dataset metadata file :arrow_right: created Python File - <a href="https://github.com/jillibus/Vehicle-Identification/blob/manghel/stanford_readdata.ipynb"> stanford_readdata.ipynb </a>
+**A)** In order to be able to load and read the datasets metadata files, we :arrow_right: created a Python File to convert the MatLab files into Python DataFrames and then upload the DataFrames into the PostgreSQL database. - <a href="https://github.com/jillibus/Vehicle-Identification/blob/manghel/stanford_readdata.ipynb"> stanford_readdata.ipynb </a>
 
 * The images were divided into two (2) sets, a training and testing one. Each of the images were numbered and named the same. 
 * The metadata  was split into three (3) different pieces, a lables, training and testing set. These were created into separate DataFrames as can be seen below:
@@ -201,13 +201,13 @@ The following outlines the steps that were taken to get things crackalakin'
 
 #### Machine Learning Models
 > This model uses multiple layers to make the model rescale the images and be able to identify them. 
-> > First the *images are rescaled* from 1 to 255 to 0 to 1 using a rescaling layer. This is to help speedup the model from using smaller numbers instead of larger numbers. 
-> > The *Conv2D layer* creates a convolution kernel each time with the a size of the images being converted included in each layer. 
-> > The *MaxPooling2D layer* that follows every Conv2D layer is primarily to down sample the detection of features in feature maps. This means that even if colors of pixels are slightly different they should be pooled togehter into the same groups for images such as car tail lights. 
-> > The *Dropout layer* is to help data from overfitting by dropping out roughly 20% of all output units from the layer.  
-> > The *Flatten layer* is added to make certain that the tensor is reshaped to have a shape that is equal to the number of elements contained in tensor not including the batch dimension. 
-> > Finally the *Dense layer* is a fully connected layer that is made to connect the model and use the 'relu' activation function. 
-> > This entire model isn't tuned for high accuracy and is more of a general model made for image recognition and categorization.
+  * First the *images are rescaled* from 1 to 255 to 0 to 1 using a rescaling layer. This is to help speedup the model from using smaller numbers instead of larger numbers.   
+  * The *Conv2D layer* creates a convolution kernel each time with the a size of the images being converted included in each layer.   
+  * The *MaxPooling2D layer* that follows every Conv2D layer is primarily to down sample the detection of features in feature maps. This means that even if colors of pixels are slightly different they should be pooled togehter into the same groups for images such as car tail lights.   
+  * The *Dropout layer* is to help data from overfitting by dropping out roughly 20% of all output units from the layer.    
+  * The *Flatten layer* is added to make certain that the tensor is reshaped to have a shape that is equal to the number of elements contained in tensor not including the batch dimension.   
+  * Finally the *Dense layer* is a fully connected layer that is made to connect the model and use the 'relu' activation function.   
+  * This entire model isn't tuned for high accuracy and is more of a general model made for image recognition and categorization.  
 
 ### Dashboard
 > We will present our project in Tableau Dashboard for our final deliverable. 
