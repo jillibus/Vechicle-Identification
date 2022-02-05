@@ -36,7 +36,7 @@
 	* A third final time to work on remaining tasks before submitting deliverables will be made during the weekend (Sat/Sun depending on schedules) each week.    
 * Any project emergency communication will be via phone :thumbsup:  
 
-# Selected Project Topic
+### Selected Project Topic
 
 ## <a href="https://github.com/jillibus/Vehicle-Identification/blob/main/Vehicle Identification Final - v2 - Deliverable 2.pdf"> Vehicle Image Recognition </a>
 
@@ -73,7 +73,7 @@ _After Course Completion_
 2. Can our prototype machine learning model identify the make, model and year of a targeted vehicle in an image?
 
 ---
-## GOAL:   
+### GOAL:   
 > Create a Image Recognition Model, using the simplest form of the model, that will recognize whether or not a vehicle is present in a photo from our data set. 
 
 ### Description of the data exploration analysis phase of the project:
@@ -86,8 +86,7 @@ _After Course Completion_
 
 > Due to the metadata being written in *Matlab*, not a familiar format that we've worked with before, such as a CSV, it was converted into a DataFrame and then loaded into our AWS Database. 
 
-**A)** In order to be able to load and read the metadata files, we found an example of how to extract the data into from MatLab and convert it into Python DataFrames then I used sqlalchemy to upload the DataFrames into the PostgreSQL database. :arrow_right:  <a href="https://github.com/jillibus/Vehicle-Identification/blob/manghel/stanford_readdata.ipynb"> stanford_readdata.ipynb </a>
-Credit to <a href='http://ai.stanford.edu/~jkrause/cars/car_dataset.html'> </a>
+**1)** In order to be able to load and read the metadata files, we found an example of how to extract the data into from MatLab and convert it into Python DataFrames then I used sqlalchemy to upload the DataFrames into the PostgreSQL database. :arrow_right:  <a href="https://github.com/jillibus/Vehicle-Identification/blob/manghel/stanford_readdata.ipynb"> stanford_readdata.ipynb </a>
 
 * The images were divided into two (2) sets, a training and testing one. Each of the images were numbered and named the same. 
 * The metadata  was split into three (3) different pieces, each for the lables, training and testing set. These were created into separate DataFrames as can be seen below:
@@ -103,8 +102,6 @@ Credit to <a href='http://ai.stanford.edu/~jkrause/cars/car_dataset.html'> </a>
 
 * Created DataFrame **test** for definition of types of cars in testing dataset. 
 <img src='images/df_test.png' width=60% height=45%/>
-
-* Created DataFrame **labels** for definition of types of cars in the dataset. 
 
 * Uploaded the DataFrames into the *Cars* Database  
    _Note_: This part had to wait until the Database was created and the DataFrames were known.
@@ -124,7 +121,8 @@ Credit to <a href='http://ai.stanford.edu/~jkrause/cars/car_dataset.html'> </a>
     df_test.to_sql(name='images', con=engine, if_exists='append',index=False)
     ```
 
-**B)** Create AWS Buckets to hold images from both the cars-train and cars-test datasets
+**2)** Create AWS Buckets to hold images from both the cars-train and cars-test datasets
+_Note_: Uploaded the images to each AWS Bucket using AWS's upload tool.
     
 <img src='images/Buckets.png' />   
 
@@ -175,7 +173,7 @@ Credit to <a href='http://ai.stanford.edu/~jkrause/cars/car_dataset.html'> </a>
   * Not a very efficient debugging method available.
   * More difficult to make quick changes to the model as it requires recreation from the beginning and retraining using any newly changed data. 
   
-> Generally, Tensorflow allows developers to create and implement a neural network easier, primarily due to its slightly more mature product than Pytorch. There are more visualization options with Tensorboard which allow developers to recognize issues with models faster. The built-in API is a huge advantage for client presentation, allowing direct deployment of TensorFlow models to client websites and applications with little interference to the actual website.  
+* Generally, Tensorflow allows developers to create and implement a neural network easier, primarily due to its slightly more mature product than Pytorch. There are more visualization options with Tensorboard which allow developers to recognize issues with models faster. The built-in API is a huge advantage for client presentation, allowing direct deployment of TensorFlow models to client websites and applications with little interference to the actual website.  
 
 #### Machine Learning Models
 > This model uses multiple layers to make the model rescale the images and be able to identify them. 
