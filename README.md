@@ -86,22 +86,22 @@ _After Course Completion_
 
 > Due to the metadata being written in *Matlab*, not a familiar format that we've worked with before, such as a CSV, it was converted into a DataFrame and then loaded into our AWS Database. 
 
-**1)** In order to be able to load and read the metadata files, we found an example of how to extract the data into from MatLab and convert it into Python DataFrames then I used sqlalchemy to upload the DataFrames into the PostgreSQL database. :arrow_right:  <a href="https://github.com/jillibus/Vehicle-Identification/blob/manghel/stanford_readdata.ipynb"> stanford_readdata.ipynb </a>
+**1)** In order to be able to load and read the metadata files, we found an example of how to extract the data into from MatLab and convert it into Python DataFrames then we used sqlalchemy to upload the DataFrames into the PostgreSQL database. :arrow_right:  <a href="https://github.com/jillibus/Vehicle-Identification/blob/manghel/stanford_readdata.ipynb"> stanford_readdata.ipynb </a>
 
 * The images were divided into two (2) sets, a training and testing one. Each of the images were numbered and named the same. 
 * The metadata  was split into three (3) different pieces, each for the lables, training and testing set. These were created into separate DataFrames as can be seen below:
 
 * Created DataFrame **labels** for definition of types of cars in the dataset.
-<img src='images/df_labels.png' width=60% height=45%/>
+<img src='images/df_labels.png' width=50% height=35%/>
 
 * Created DataFrame **train** for definition of types of cars in training dataset. 
-<img src='images/df_train.png' width=60% height=45%/>
+<img src='images/df_train.png' width=50% height=35%/>
 
 * *Merging labels*
-<img src='images/df_train_w_labels.png' width=60% height=45%/>
+<img src='images/df_train_w_labels.png' width=50% height=35%/>
 
 * Created DataFrame **test** for definition of types of cars in testing dataset. 
-<img src='images/df_test.png' width=60% height=45%/>
+<img src='images/df_test.png' width=50% height=35%/>
 
 * Uploaded the DataFrames into the *Cars* Database  
    _Note_: This part had to wait until the Database was created and the DataFrames were known.
@@ -149,13 +149,13 @@ _Note_: Uploaded the images to each AWS Bucket using AWS's upload tool.
 
 ---  
 > Database population:
-<img src='images/Label_count.png' width=50% height=30% />
-<img src='images/Image_count.png' width=50% height=30% />  
+<img src='images/Label_count.png' width=40% height=30% />
+<img src='images/Image_count.png' width=40% height=30% />  
 
  * _Sample Data_: Located at **DBTableExamples.txt**
 ---
 > Database Example:
-<img src='images/DBTableExamples.png' width=55% height=40% />
+<img src='images/DBTableExamples.png' width=45% height=30% />
 
 ### Running Train/Test Machine Model on Data Set
 
