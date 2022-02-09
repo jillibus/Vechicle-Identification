@@ -15,7 +15,7 @@
 
 **Team Name:** 
 
-CTRL ALT DEFEAT
+*CTRL ALT DEFEAT*
 
 **Team Logo:**
 
@@ -32,13 +32,13 @@ CTRL ALT DEFEAT
 
 * The team will regularly use <a href="https://slack.com/"> **Slack** </a> :speech_balloon: for communicating updates and sharing of links/files   
 * The team will meet three (3) times a week to work on the project.
-	* Two times during designated class time to work on the project. Teammates are welcome to remain in breakout rooms after class to continue working. 
-	* A third final time to work on remaining tasks before submitting deliverables will be made during the weekend (Sat/Sun depending on schedules) each week.    
+  * Two times during designated class time to work on the project. Teammates are welcome to remain in breakout rooms after class to continue working.   
+  * A third final time to work on remaining tasks before submitting deliverables will be made during the weekend (Sat/Sun depending on schedules) each week.    
 * Any project emergency communication will be via phone :thumbsup:  
 
 # Selected Project Topic
 
-#### <a href="https://github.com/jillibus/Vehicle-Identification/blob/main/Vehicle%20Identification%20Final%20-%20Deliverable%202.pdf"> Vehicle Image Recognition </a>
+#### <a href="https://github.com/jillibus/Vehicle-Identification/blob/main/Vehicle Identification Final - v2 - Deliverable 2.pdf"> Vehicle Image Recognition </a>
 
 ### Business Applications for Vehicle Image Recognition
 
@@ -78,54 +78,53 @@ _After Course Completion_
 
 ### Description of the data exploration analysis phase of the project:
 
-> The data exploration phase of this project was a challenge for our team. The raw data from Stanford University came in MatLab format, which had to be processed for analysis in Pandas Dataframe. We will be evaluating the images to determine what features we want to capture for the dataset and then store into database tables.
-The following thought process outlines the steps that were taken to get things crackalakin'
+> The data exploration phase of this project was a challenge for our team. The raw data from Stanford University came in MatLab format, which had to be processed for analysis in Pandas DataFrame. We will be evaluating the images to determine what features we want to capture for the dataset and then store into database tables.  
 
-### Loading in the dataset
+> The following outlines the steps that were taken to get things crackalakin'
 
-* Due to the metadata being written in *Matlab* and not a familiar format that we've worked with as a CSV, it was converted into a DataFrame & then loaded into our AWS Database. 
+> Due to the metadata being written in *Matlab*, not a familiar format that we've worked with before, such as a CSV, it was converted into a DataFrame and then loaded into our AWS Database. 
 
-**A)** In order to be able and load & read the dataset metadata file :arrow_right: created Python File - <a href="https://github.com/jillibus/Vehicle-Identification/blob/manghel/stanford_readdata.ipynb"> stanford_readdata.ipynb </a>
+**A)** In order to be able to load and read the metadata files, we found an example of how to extract the data into from MatLab and convert it into Python DataFrames then we used sqlalchemy to upload the DataFrames into the PostgreSQL database. :arrow_right:  <a href="https://github.com/jillibus/Vehicle-Identification/blob/manghel/stanford_readdata.ipynb"> stanford_readdata.ipynb </a>
 
 * The images were divided into two (2) sets, a training and testing one. Each of the images were numbered and named the same. 
-* The metadata  was split into three (3) different pieces, a lables, training & testing set. These were created into separate dataframes as can be seen below:
+* The metadata  was split into three (3) different pieces, each for the labels, training and testing set. These were created into separate DataFrames as can be seen below:
 
 * Created DataFrame **labels** for definition of types of cars in the dataset.
-<img src='images/df_labels.png' width=60% height=45%/>
+<img src='images/df_labels2.png' width=40% height=5%/>
 
 * Created DataFrame **train** for definition of types of cars in training dataset. 
-<img src='images/df_train.png' width=60% height=45%/>
+<img src='images/df_train2.png' width=40% height=35%/>
 
 * *Merging labels*
-<img src='images/df_train_w_labels.png' width=60% height=45%/>
+<img src='images/df_train3.png' width=40% height=35%/>
 
 * Created DataFrame **test** for definition of types of cars in testing dataset. 
-<img src='images/df_test.png' width=60% height=45%/>
+<img src='images/df_test2.png' width=40% height=35%/>
 
 **B)** Create AWS Buckets to hold images from both the cars-train and cars-test datasets
+_Note_: Uploaded the images to each AWS Bucket using AWS's upload tool.
     
-<img src='images/Buckets.png' />   
+<img src='images/Buckets2.png' width=70% height=35%/>   
 
 **C)** Creation of AWS PostgreSQL Database 
     
-<img src='images/Database.png'/>	 
-
+<img src='images/Database2.png' width=70% height=35%/>
+ 
 * The process to move the contents of the Pandas DataFrames into the PostgreSQL database was using the following:
     * Using sqlalchemy's create_engine library
     ```
-    # Load labels dataframe into lables table
+    # Load labels DataFrame into lables table
     import psycopg2
     from sqlalchemy import create_engine
     db_string = f"postgresql://postgres:{db_password}@cars.{aws_url}:5432/cars"
     engine = create_engine(db_string)
     ```
-    * For each of the DataFrames we created in _stanford_readdata.ipynb_, I took the dataframe and used the to_sql function.
+    * For each of the DataFrames we created in _stanford_readdata.ipynb_, we took the DataFrame and used the to_sql function.
     ```
     labels.to_sql(name='labels', con=engine, if_exists='append',index=True)
     df_train.to_sql(name='images', con=engine, if_exists='append',index=True)
     df_test.to_sql(name='images', con=engine, if_exists='append',index=False)
     ```
-    
 * Creation of tables - lables & images in cars database for dataset
 * Population of tables - from DataFrames, labels, df_train, df_test
 
@@ -135,9 +134,23 @@ The following thought process outlines the steps that were taken to get things c
 	
 <img src='images/Image-Table.png' width="722" height="460"/>
 
-### Running Train/Test Machine Model on Data Set
+**D)** Running Train/Test Machine Model on Data Set
 
-#### Decision-making process & explanation of model choice
+1) We start with a new Python file, here we start with the DataFrames, populated from the Cars Database,
+2) We send in the DataFrame, and loop through the Training data, pull the image from the location in the Dataframe
+3) Send it through our Model, and Train our Model.
+4) Once the Model is trained, we repeat the steps with our Testing data and determine our accuracy.
+
+**Our Model** Our model uses multiple layers to make the model rescale the images and be able to identify them. 
+  * First the *images are rescaled* from 1 to 255 to 0 to 1 using a rescaling layer. This is to help speedup the model from using smaller numbers instead of larger numbers.   
+  * The *Conv2D layer* creates a convolution kernel each time with the a size of the images being converted included in each layer.   
+  * The *MaxPooling2D layer* that follows every Conv2D layer is primarily to down sample the detection of features in feature maps. This means that even if colors of pixels are slightly different they should be pooled togehter into the same groups for images such as car tail lights.   
+  * The *Dropout layer* is to help data from overfitting by dropping out roughly 20% of all output units from the layer.    
+  * The *Flatten layer* is added to make certain that the tensor is reshaped to have a shape that is equal to the number of elements contained in tensor not including the batch dimension.   
+  * Finally the *Dense layer* is a fully connected layer that is made to connect the model and use the 'relu' activation function.   
+  * This entire model isn't tuned for high accuracy and is more of a general model made for image recognition and categorization. 
+
+### Decision-making process and explanation of model choice
 > Neural Networks vs. Random Forest Classifier
 
 * Neural Networks are generally more popular in usage for image processing in machine learning model (MLM). The two major packages considered for this project were **TensorFlow** and **Pytorch**. Both packages are very succesful at running models on image classification. However, our decision to chose was to go with <a href="https://www.tensorflow.org/"> TensorFlow </a>. 
@@ -151,29 +164,12 @@ The following thought process outlines the steps that were taken to get things c
   * Not a very efficient debugging method available.
   * More difficult to make quick changes to the model as it requires recreation from the beginning and retraining using any newly changed data. 
   
-> Generally, Tensorflow allows developers to create and implement a neural network easier, primarily due to its slightly more mature product than Pytorch. There are more visualization options with Tensorboard which allow developers to recognize issues with models faster. The built-in API is a huge advantage for client presentation, allowing direct deployment of TensorFlow models to client websites and applications with little interference to the actual website.  
+* Generally, Tensorflow allows developers to create and implement a neural network easier, primarily due to its slightly more mature product than Pytorch. There are more visualization options with Tensorboard which allow developers to recognize issues with models faster. The built-in API is a huge advantage for client presentation, allowing direct deployment of TensorFlow models to client websites and applications with little interference to the actual website.  
 
-* Created DataFrame **labels** for definition of types of cars in the dataset. 
+### Database
 
-  * Part 2 The process to move the contents of the Pandas DataFrames into the PostgreSQL database was using the following:
-    * Using sqlalchemy's create_engine library
-    ```
-    # Load labels dataframe into lables table
-    import psycopg2
-    from sqlalchemy import create_engine
-    db_string = f"postgresql://postgres:{db_password}@cars.{aws_url}:5432/cars"
-    engine = create_engine(db_string)
-    ```
-    * For each of the DataFrames we created in _stanford_readdata.ipynb_, I took the dataframe and used the to_sql function.
-    ```
-    labels.to_sql(name='labels', con=engine, if_exists='append',index=True)
-    df_train.to_sql(name='images', con=engine, if_exists='append',index=True)
-    df_test.to_sql(name='images', con=engine, if_exists='append',index=False)
-    ```
-
-#### Database Overview
 **Note: You will not be able to reach these links without proper authorization**
-> <a href="https://www.postgresql.org/"> Postgresql </a> is the database we intend to use hosted on <a href="https://aws.amazon.com/"> Amazon Web Services, AWS </a>.    
+> <a href="https://www.postgresql.org/"> PostgreSQL </a> is the database we intend to use hosted on <a href="https://aws.amazon.com/"> Amazon Web Services, AWS </a>.    
   *  _DB Name:_ cars  
   *  _Database Instance ID:_ cars 
   *  _Database Link:_ <a href='http://cars.ckxsklg24qnv.us-east-2.rds.amazonaws.com/'> Cars DB </a>  
@@ -191,24 +187,23 @@ The following thought process outlines the steps that were taken to get things c
 
 ---  
 > Database population:
-<img src='images/Label_count.png' width=50% height=30% />
-<img src='images/Image_count.png' width=50% height=30% />  
+<img src='images/Label_count.png' width=40% height=30% />
+<img src='images/Image_count.png' width=40% height=30% />  
 
  * _Sample Data_: Located at **DBTableExamples.txt**
 ---
 > Database Example:
-<img src='images/DBTableExamples.png' width=55% height=40% />
 
-#### Machine Learning Models
-> SciKitLearn is the ML library we'll be using to create a classifier. This will determine if an image contains a vehicle or not and what make the vehicle is.  
-> TensorFlow will be the application and library where we will be using and testing the Neural Networks Models.
-> The Model we will use is Sequential, adding hidden layers with activation set to _reLU_, using the optimizer _adam_ and _accuracy_ metrics.    
-> The original data set is a 50-50 split of data, we will be adjusting this as future models are introduced.    
+<img src='images/DBTableExamples.png' width=45% height=30% />
 
 ### Dashboard
-> In addition to using a Flask template, we will also integrate D3.js for a fully functioning and interactive dashboard.   
 > We will present our project in Tableau Dashboard for our final deliverable. 
-> Our application will be hosted on Amazon Web Services, AWS.  
+> We will create an application of our Vehicle Recognition Model
+  * Our application will allow a user to upload an image and choose a button to run the application
+  * The application will return if the image uploaded has a vehicle in the image or not.
+  * Our application will be hosted on Amazon Web Services, AWS.  
+  * We will be using Flask and Pickle to integrate the model into the application.
+> In addition to using a Flask template, we will also integrate D3.js for a fully functioning and interactive dashboard.  
 
 ## Results
 
