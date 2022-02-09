@@ -28,14 +28,6 @@
 > <a href="https://github.com/ltmurphy"> Logan Murphy	</a>  
 > <a href="https://github.com/CrossCreed"> Mihai Anghel	</a>  
 
-### Communication Protocols
-
-* The team will regularly use <a href="https://slack.com/"> **Slack** </a> :speech_balloon: for communicating updates and sharing of links/files   
-* The team will meet three (3) times a week to work on the project.
-  * Two times during designated class time to work on the project. Teammates are welcome to remain in breakout rooms after class to continue working.   
-  * A third final time to work on remaining tasks before submitting deliverables will be made during the weekend (Sat/Sun depending on schedules) each week.    
-* Any project emergency communication will be via phone :thumbsup:  
-
 # Selected Project Topic
 
 #### <a href="https://github.com/jillibus/Vehicle-Identification/blob/main/Vehicle Identification Final - v2 - Deliverable 2.pdf"> Vehicle Image Recognition </a>
