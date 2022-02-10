@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8" />
+   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+   <title>Vehicle Verifier</title>
+   <link
+     rel="stylesheet"
+     href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+   />
+</head>
+<body>
+    <div class="container">
+        <!-- Jumbotron Section -->
+        <div class="jumbotron text-center" style="background-image:url('../images/html.png');">
+            <h1>Vehicle Verifier</h1>
+            <p><a class="btn btn-upload btn-lg" href=""
+                  role="button">Upload Image to Test</a></p>
+        <!-- End of Jumbotron Section -->
+        </div>
+
+        <!-- Vehicle Identification Section -->
+        <div class="Vehicle-Identification" >
+            <h1>Vehicle Identification</h1>
+            <p><a class="btn btn-run btn-lg" href=""
+                  role="button">Run Test</a></p>
+        <!-- End of Vehicle Identification Section -->
+        </div>
+
+        <!-- Vehicle Results Section -->
+        <!-- First level - Display Image -->
+        <div class="row" id="featured-image">
+            <div class="col-md-8">
+              <h2>Featured Image</h2>
+              <!--<img src="{{url_for('static',filename='00100.jpg')}}" style="width:100%" /> -->
+              <img src="static/00100.jpg" >
+            </div>
+
+            <!-- Display Model Results -->
+            <!-- Second Level -->
+            <div class="col-md-4">
+                <div class="row" id="results">
+                    <h4>Model Results</h4>
+                    <img src="../images/camera.png"/>
+                </div>
+            </div>
+        </div>
+        <!-- End of Vehicle Results Section -->
+    </div>
+    <!-- End of container -->
+
+</body>
+</html>
