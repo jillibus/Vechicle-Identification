@@ -28,17 +28,15 @@
 > <a href="https://github.com/ltmurphy"> Logan Murphy	</a>  
 > <a href="https://github.com/CrossCreed"> Mihai Anghel	</a>  
 
-### Communication Protocols
-
-* The team will regularly use <a href="https://slack.com/"> **Slack** </a> :speech_balloon: for communicating updates and sharing of links/files   
-* The team will meet three (3) times a week to work on the project.
-  * Two times during designated class time to work on the project. Teammates are welcome to remain in breakout rooms after class to continue working.   
-  * A third final time to work on remaining tasks before submitting deliverables will be made during the weekend (Sat/Sun depending on schedules) each week.    
-* Any project emergency communication will be via phone :thumbsup:  
-
 # Selected Project Topic
 
+> The following link will take you to our draft presentation created in Google Slides. The file was saved and uploaded to GitHub as a PDF to allow easier access for viewers. 
+
 #### <a href="https://github.com/jillibus/Vehicle-Identification/blob/main/Vehicle Identification Final - v2 - Deliverable 2.pdf"> Vehicle Image Recognition </a>
+
+#### Tableau Presentation
+
+The project outline can also be viewed in Tableau via this <a href="https://public.tableau.com/app/profile/logan.murphy/viz/VehicleIdentificationPresentationDraft_1/VehicleIdentificationStory?publish=yes"> hyperlink </a> (version 1 - Mihai).
 
 ### Business Applications for Vehicle Image Recognition
 
