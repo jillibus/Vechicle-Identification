@@ -1,4 +1,4 @@
-import flask
+from flask import Flask, render_template, url_for, request, redirect
 import pickle
 import pandas as pd
 
@@ -7,15 +7,16 @@ import pandas as pd
 #    model = pickle.load(f)
 
 # Initialise the Flask app
-app = flask.Flask(__name__, template_folder='templates')
+#app = Flask(__name__, template_folder='templates')
+app = Flask(__name__, static_url_path='static')
 
 # Set up the main route
-@app.route('/')
-#@app.route('/', methods=['GET', 'POST'])
+# @app.route('/')
+@app.route('/', methods=['GET', 'POST'])
 def main():
 #    if flask.request.method == 'GET':
         # Just render the initial form, to get input
-        return(flask.render_template('main.html'))
+        return render_template("index.html")
     
 #    if flask.request.method == 'POST':
 #        # Extract the result of image 
@@ -38,5 +39,5 @@ def main():
 #                                     result=prediction,
 #                                     )
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     app.run()
