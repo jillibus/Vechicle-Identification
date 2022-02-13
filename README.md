@@ -99,7 +99,7 @@ _After Course Completion_
 * Created DataFrame **test** for definition of types of cars in testing dataset. 
 <img src='images/df_test2.png' width=40% height=35%/>
 
-**B)** Create AWS Buckets to hold images from both the cars-train and cars-test datasets
+**B)** Create AWS Buckets to hold images from both the cars-train and cars-test datasets  
 _Note_: Uploaded the images to each AWS Bucket using AWS's upload tool.
     
 <img src='images/Buckets2.png' width=70% height=35%/>   
@@ -203,7 +203,7 @@ _Note_: Uploaded the images to each AWS Bucket using AWS's upload tool.
 
 ## Summary
 > Recommendation for future analysis:  
-Increased timeframe for working with the data and building and training the model.  
+Increased timeframe for working with the data in order to train and test the model.  
 
 > Anything the team would have done differently:  
 Understood the complexity of the dataset we chose, in order to read the data from a file system and then present it into the model.  
