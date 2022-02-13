@@ -28,17 +28,15 @@
 > <a href="https://github.com/ltmurphy"> Logan Murphy	</a>  
 > <a href="https://github.com/CrossCreed"> Mihai Anghel	</a>  
 
-### Communication Protocols
-
-* The team will regularly use <a href="https://slack.com/"> **Slack** </a> :speech_balloon: for communicating updates and sharing of links/files   
-* The team will meet three (3) times a week to work on the project.
-  * Two times during designated class time to work on the project. Teammates are welcome to remain in breakout rooms after class to continue working.   
-  * A third final time to work on remaining tasks before submitting deliverables will be made during the weekend (Sat/Sun depending on schedules) each week.    
-* Any project emergency communication will be via phone :thumbsup:  
-
 # Selected Project Topic
 
+> The following link will take you to our draft presentation created in Google Slides. The file was saved and uploaded to GitHub as a PDF to allow easier access for viewers. 
+
 #### <a href="https://github.com/jillibus/Vehicle-Identification/blob/main/Vehicle Identification Final - v2 - Deliverable 2.pdf"> Vehicle Image Recognition </a>
+
+#### Tableau Presentation
+
+The project outline can also be viewed in Tableau via this <a href="https://public.tableau.com/app/profile/logan.murphy/viz/VehicleIdentificationPresentation/VehicleIdentificationStory"> hyperlink </a> (version 1.2 - Mihai/Logan).
 
 ### Business Applications for Vehicle Image Recognition
 
@@ -141,14 +139,14 @@ _Note_: Uploaded the images to each AWS Bucket using AWS's upload tool.
 3) Send it through our Model, and Train our Model.
 4) Once the Model is trained, we repeat the steps with our Testing data and determine our accuracy.
 
-**Our Model** Our model uses multiple layers to make the model rescale the images and be able to identify them. 
-  * First the *images are rescaled* from 1 to 255 to 0 to 1 using a rescaling layer. This is to help speedup the model from using smaller numbers instead of larger numbers.   
+**Our Model** uses multiple layers to make the model rescale the images and be able to identify them. 
+  * First the *images are rescaled* from 1 to 255 to 0 to 1 using a rescaling layer. This will allow the model to run faster by using smaller numbers instead of large numbers.   
   * The *Conv2D layer* creates a convolution kernel each time with the a size of the images being converted included in each layer.   
   * The *MaxPooling2D layer* that follows every Conv2D layer is primarily to down sample the detection of features in feature maps. This means that even if colors of pixels are slightly different they should be pooled togehter into the same groups for images such as car tail lights.   
   * The *Dropout layer* is to help data from overfitting by dropping out roughly 20% of all output units from the layer.    
   * The *Flatten layer* is added to make certain that the tensor is reshaped to have a shape that is equal to the number of elements contained in tensor not including the batch dimension.   
   * Finally the *Dense layer* is a fully connected layer that is made to connect the model and use the 'relu' activation function.   
-  * This entire model isn't tuned for high accuracy and is more of a general model made for image recognition and categorization. 
+  * This model isn't tuned for high accuracy but is instead a general model made for image recognition and categorization. 
 
 ### Decision-making process and explanation of model choice
 > Neural Networks vs. Random Forest Classifier
