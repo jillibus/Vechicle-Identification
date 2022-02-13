@@ -202,10 +202,10 @@ _Note_: Uploaded the images to each AWS Bucket using AWS's upload tool.
 ## Results
 
 ## Summary
-> Recommendation for future analysis:
-Increased timeframe for working with the data and building and training the model.
+> Recommendation for future analysis:  
+Increased timeframe for working with the data to train and test the model.
 
-> Anything the team would have done differently:
+> Anything the team would have done differently:    
 Understood the complexity of the dataset we chose, in order to read the data from a file system and then present it into the model.
 
 Thank you for your time for reading our project details, please let us know if you need any additional information.  
