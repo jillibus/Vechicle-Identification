@@ -140,6 +140,7 @@ _Note_: Uploaded the images to each AWS Bucket using AWS's upload tool.
 4) Once the Model is trained, we repeat the steps with our Testing data and determine our accuracy.
 
 **Our Model** uses multiple layers to make the model rescale the images and be able to identify them. 
+![vehicle/nonvehicle model](https://i.imgur.com/Cjxfk8V.png)
   * First the *images are rescaled* from 1 to 255 to 0 to 1 using a rescaling layer. This will allow the model to run faster by using smaller numbers instead of large numbers.   
   * The *Conv2D layer* creates a convolution kernel each time with the a size of the images being converted included in each layer.   
   * The *MaxPooling2D layer* that follows every Conv2D layer is primarily to down sample the detection of features in feature maps. This means that even if colors of pixels are slightly different they should be pooled togehter into the same groups for images such as car tail lights.   
