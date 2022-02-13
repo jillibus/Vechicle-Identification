@@ -196,11 +196,7 @@ _Note_: Uploaded the images to each AWS Bucket using AWS's upload tool.
 
 ### Dashboard
 > We will present our project in Tableau Dashboard for our final deliverable. 
-> We will create an application of our Vehicle Recognition Model
-  * Our application will allow a user to upload an image and choose a button to run the application
-  * The application will return if the image uploaded has a vehicle in the image or not.
-  * Our application will be hosted on Amazon Web Services, AWS.  
-  * We will be using Flask and Pickle to integrate the model into the application.
+> We will present our application prototype that we plan on completing in a future release.
 > In addition to using a Flask template, we will also integrate D3.js for a fully functioning and interactive dashboard.  
 
 ## Results
@@ -209,9 +205,8 @@ _Note_: Uploaded the images to each AWS Bucket using AWS's upload tool.
 > Recommendation for future analysis:
 Increased timeframe for working with the data and building and training the model.
 
-
 > Anything the team would have done differently:
-TBD
+Understood the complexity of the dataset we chose, in order to split read the data from a file system and then present it into the model.
 
 Thank you for your time for reading our project details, please let us know if you need any additional information.  
 Harsh Patel, Jill Hughes, Logan Murphy, Mihai Anghel
