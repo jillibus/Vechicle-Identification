@@ -196,7 +196,7 @@ _Note_: Uploaded the images to each AWS Bucket using AWS's upload tool.
 
 ### Dashboard
 > We will present our project in Tableau Dashboard for our final deliverable. 
-> We will presenet a prototype of our future Application
+> We will present our application prototype that we plan on completing in a future release.
 > We will also integrate D3.js for a fully functioning and interactive dashboard.  
 
 ## Results
@@ -206,7 +206,7 @@ _Note_: Uploaded the images to each AWS Bucket using AWS's upload tool.
 Increased timeframe for working with the data and building and training the model.
 
 > Anything the team would have done differently:
-We would have spent more time delving in how the data set we chose posed problems in how to present the data into the model for training and testing, before agreeing with this data set.  This has put us behind in getting a working model for the dataset we chose.
+Understood the complexity of the dataset we chose, in order to read the data from a file system and then present it into the model.
 
 Thank you for your time for reading our project details, please let us know if you need any additional information.  
 Harsh Patel, Jill Hughes, Logan Murphy, Mihai Anghel
