@@ -195,18 +195,18 @@ _Note_: Uploaded the images to each AWS Bucket using AWS's upload tool.
 <img src='images/DBTableExamples.png' width=45% height=30% />
 
 ### Dashboard
-> We will present our project in Tableau Dashboard for our final deliverable. 
-> We will present our application prototype that we plan on completing in a future release.
-> We will also integrate D3.js for a fully functioning and interactive dashboard.  
+> We will present our project in Tableau Dashboard for our final deliverable.   
+> We will present our application prototype that we plan on completing in a future release.  
+> We will also integrate D3.js for a fully functioning and interactive dashboard.    
 
 ## Results
 
 ## Summary
-> Recommendation for future analysis:
-Increased timeframe for working with the data and building and training the model.
+> Recommendation for future analysis:  
+Increased timeframe for working with the data and building and training the model.  
 
-> Anything the team would have done differently:
-Understood the complexity of the dataset we chose, in order to read the data from a file system and then present it into the model.
+> Anything the team would have done differently:  
+Understood the complexity of the dataset we chose, in order to read the data from a file system and then present it into the model.  
 
-Thank you for your time for reading our project details, please let us know if you need any additional information.  
+Thank you for your time for reading our project details, please let us know if you need any additional information.    
 Harsh Patel, Jill Hughes, Logan Murphy, Mihai Anghel
