@@ -203,6 +203,12 @@ _Note_: Uploaded the images to each AWS Bucket using AWS's upload tool.
 ___
 ![ModelTestResults](https://user-images.githubusercontent.com/89947873/153783845-e61721b8-968a-49fa-a62f-b05af7f1659c.png)
 
+The results list the Make,Model, and Year of the vehicle and how many times it was identified. 
+
+![image](https://user-images.githubusercontent.com/89947873/153802758-dafa300f-59a3-429c-95a5-5174b1389b40.png)
+
+The overall accuracy is low but the Model is functioning. Accuracy improvements in future iterations will be a definitive objective.
+
 ## Summary
 > Recommendation for future analysis:      
 Increased timeframe for working with the data in order to train and test the Model.  
