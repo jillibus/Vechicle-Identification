@@ -35,7 +35,7 @@ test## General Information
 
 #### Tableau Presentation
 
-The project outline can also be viewed in Tableau via this <a href="https://public.tableau.com/app/profile/logan.murphy/viz/VehicleIdentificationPresentation/VehicleIdentificationStory"> hyperlink </a> (version 1.2 - Mihai/Logan).
+The project outline can also be viewed in Tableau via this <a href="https://public.tableau.com/app/profile/logan.murphy/viz/Vehicle_Identification_Presentation_D3/VehicleIdentificationStory?publish=yes"> hyperlink </a> *(Version for Deliverable 3)*
 
 ### Business Applications for Vehicle Image Recognition
 
