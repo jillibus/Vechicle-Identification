@@ -32,7 +32,7 @@
 
 > The following link will take you to our draft presentation created in Google Slides. The file was saved and uploaded to GitHub as a PDF to allow easier access for viewers. 
 
-#### <a href="https://github.com/jillibus/Vehicle-Identification/blob/main/Vehicle Identification Final - Deliverable 3.pdf"> Vehicle Image Recognition </a>
+#### <a href="Vehicle Identification Final - Deliverable 3.pdf"> Vehicle Image Recognition </a>
 
 #### Tableau Presentation
 
