@@ -10,7 +10,8 @@
 
 ## GitHub Application
 <a href="https://jillibus.github.io/Vehicle-Identification">Vehicle Identification</a>
-test## General Information
+
+## General Information
 
 **Team Name:** 
 
@@ -31,11 +32,11 @@ test## General Information
 
 > The following link will take you to our draft presentation created in Google Slides. The file was saved and uploaded to GitHub as a PDF to allow easier access for viewers. 
 
-#### <a href="https://github.com/jillibus/Vehicle-Identification/blob/main/Vehicle Identification Final - v2 - Deliverable 2.pdf"> Vehicle Image Recognition </a>
+#### <a href="Vehicle Identification Final - Deliverable 3.pdf"> Vehicle Image Recognition </a>
 
 #### Tableau Presentation
 
-The project outline can also be viewed in Tableau via this <a href="https://public.tableau.com/app/profile/logan.murphy/viz/Vehicle_Identification_Presentation_D3/VehicleIdentificationStory?publish=yes"> hyperlink </a> *(Version for Deliverable 3)*
+The project outline can also be viewed in Tableau via this <a href="https://public.tableau.com/app/profile/logan.murphy/viz/Vehicle_Identification_Presentation_D3/VehicleIdentificationStory"> hyperlink </a> *(Version for Deliverable 3)*
 
 ### Business Applications for Vehicle Image Recognition
 
@@ -203,7 +204,7 @@ _Note_: Uploaded the images to each AWS Bucket using AWS's upload tool.
 ___
 ![ModelTestResults](https://user-images.githubusercontent.com/89947873/153783845-e61721b8-968a-49fa-a62f-b05af7f1659c.png)
 
-The results list the Make,Model, and Year of the vehicle and how many times it was identified. 
+The results list the Make, Model and Year of the vehicle and how many times it was identified. 
 
 ![image](https://user-images.githubusercontent.com/89947873/153802758-dafa300f-59a3-429c-95a5-5174b1389b40.png)
 
