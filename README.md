@@ -10,8 +10,7 @@
 
 ## GitHub Application
 <a href="https://jillibus.github.io/Vehicle-Identification">Vehicle Identification</a>
-
-## General Information
+test## General Information
 
 **Team Name:** 
 
@@ -36,11 +35,11 @@
 
 #### Tableau Presentation
 
-The project outline can also be viewed in Tableau via this <a href="https://public.tableau.com/app/profile/logan.murphy/viz/VehicleIdentificationPresentationDraft_1/VehicleIdentificationStory?publish=yes"> hyperlink </a> (version 1 - Mihai).
+The project outline can also be viewed in Tableau via this <a href="https://public.tableau.com/app/profile/logan.murphy/viz/VehicleIdentificationPresentation/VehicleIdentificationStory"> hyperlink </a> (version 1.2 - Mihai/Logan).
 
 ### Business Applications for Vehicle Image Recognition
 
-> The topic at hand was selected for its potential use in intelligent transportation applications that focus on monitoring of traffic flow, automated parking systems, and security enforcement.  Adding physical characteristics, with existing systems that track traffic patterns that include type, velocity, direction and position, (Vehicular Ad Hoc Networks - VANETs), would advance the information provided for use in additional applications.
+> The project topic was selected for its potential use in smart transportation applications that focus on the monitoring of traffic flow, automated parking systems, and security enforcement.  Adding physical characteristics, with existing systems that track traffic patterns that include type, velocity, direction and position, (Vehicular Ad Hoc Networks - VANETs), would advance the information provided for use in additional applications.
 
 ### Source Data Chosen
 
@@ -55,15 +54,15 @@ The project outline can also be viewed in Tableau via this <a href="https://publ
   
 ### Project Goal
 
-> Our Project Goal is to create an _Image Recognition Model_, with the simplest form of the model recognizing whether or not a vehicle is present in a photo from our data set. 
+> Our Project Goal is to create an _Image Recognition Model_, with the simplest form of the Model recognizing whether or not a vehicle is present in a photo from our data set. 
 
 ### Future Goals
 _After Course Completion_
-> Our next goal we will build on the model so that it can determine whether or not the vehicle in the image is a BMW or another brand of vehicle.
+> Our next goal we will build on the Model so that it can determine whether or not the vehicle in the image is a BMW or another brand of vehicle.
 
-> Further Goals for this project, with added complexity and continued development, are to determine the make and model of targeted vehicles. 
+> Additional Goals for this project, with added complexity and continued development, are to determine the make and model of targeted vehicles. 
 
-> The final iteration will have a multidude of potential real world uses such as amber alert and law enforcement application integration. 
+> The final iteration will have a multidude of potential real world uses. Law enforcement and amber alert application integration are just two of the myriad of examples. 
 
 ### **Questions the team hopes to answer with the data:**
 1. Can we take a dataset containing thousands of images and create a model using machine learning in order to identify whether or not a vehicle is present in an image?
@@ -72,20 +71,20 @@ _After Course Completion_
 
 ---
 # GOAL:   
-> Create a Image Recognition Model, using the simplest form of the model, that will recognize whether or not a vehicle is present in a photo from our data set. 
+> Create a Image Recognition Model, using the simplest form of the Model, that will recognize whether or not a vehicle is present in a photo from our data set. 
 
 ### Description of the data exploration analysis phase of the project:
 
-> The data exploration phase of this project was a challenge for our team. The raw data from Stanford University came in MatLab format, which had to be processed for analysis in Pandas DataFrame. We will be evaluating the images to determine what features we want to capture for the dataset and then store into database tables.  
+> The data exploration phase of this project was a challenge for our team. The raw data from Stanford University came in MatLab format, which had to be processed for analysis in a Pandas DataFrame. We will be evaluating the images to determine what features we want to capture for the dataset and then store into database tables.  
 
 > The following outlines the steps that were taken to get things crackalakin'
 
-> Due to the metadata being written in *Matlab*, not a familiar format that we've worked with before, such as a CSV, it was converted into a DataFrame and then loaded into our AWS Database. 
+> Due to the metadata being written in *Matlab*, which is not a familiar format for the team like csv, it was converted into a DataFrame and then loaded into our AWS Database. 
 
-**A)** In order to be able to load and read the metadata files, we found an example of how to extract the data into from MatLab and convert it into Python DataFrames then we used sqlalchemy to upload the DataFrames into the PostgreSQL database. :arrow_right:  <a href="https://github.com/jillibus/Vehicle-Identification/blob/manghel/stanford_readdata.ipynb"> stanford_readdata.ipynb </a>
+**A)** In order to be able to load and read the metadata files, we found an example of how to extract the data from MatLab and convert it into Python DataFrames. Then we used SQLAlchemy to upload the DataFrames into the PostgreSQL database. :arrow_right:  <a href="https://github.com/jillibus/Vehicle-Identification/blob/manghel/stanford_readdata.ipynb"> stanford_readdata.ipynb </a>
 
-* The images were divided into two (2) sets, a training and testing one. Each of the images were numbered and named the same. 
-* The metadata  was split into three (3) different pieces, each for the labels, training and testing set. These were created into separate DataFrames as can be seen below:
+* The images were divided into two (2) sets, a training set and a testing set. Each of the images were numbered and named the same. 
+* The metadata  was split into three (3) different pieces,  one each for the labels, training and testing set. These were created into separate DataFrames as can be seen below:
 
 * Created DataFrame **labels** for definition of types of cars in the dataset.
 <img src='images/df_labels2.png' width=40% height=5%/>
@@ -99,7 +98,7 @@ _After Course Completion_
 * Created DataFrame **test** for definition of types of cars in testing dataset. 
 <img src='images/df_test2.png' width=40% height=35%/>
 
-**B)** Create AWS Buckets to hold images from both the cars-train and cars-test datasets
+**B)** Create AWS Buckets to hold images from both the cars-train and cars-test datasets  
 _Note_: Uploaded the images to each AWS Bucket using AWS's upload tool.
     
 <img src='images/Buckets2.png' width=70% height=35%/>   
@@ -134,24 +133,25 @@ _Note_: Uploaded the images to each AWS Bucket using AWS's upload tool.
 
 **D)** Running Train/Test Machine Model on Data Set
 
-1) We start with a new Python file, here we start with the DataFrames, populated from the Cars Database,
-2) We send in the DataFrame, and loop through the Training data, pull the image from the location in the Dataframe
+1) In a new Python file, we start with the DataFrames, populated from the Cars Database.
+2) We send in the DataFrame, and loop through the Training data, pulling the image from the location in the Dataframe.
 3) Send it through our Model, and Train our Model.
 4) Once the Model is trained, we repeat the steps with our Testing data and determine our accuracy.
 
-**Our Model** Our model uses multiple layers to make the model rescale the images and be able to identify them. 
-  * First the *images are rescaled* from 1 to 255 to 0 to 1 using a rescaling layer. This is to help speedup the model from using smaller numbers instead of larger numbers.   
+**Our Model** uses multiple layers to make the Model rescale the images and be able to identify them. 
+![vehicle/nonvehicle model](https://i.imgur.com/Cjxfk8V.png)
+  * First the *images are rescaled* from 1 to 255 to 0 to 1 using a rescaling layer. This will allow the Model to run faster by using smaller numbers instead of large numbers.   
   * The *Conv2D layer* creates a convolution kernel each time with the a size of the images being converted included in each layer.   
-  * The *MaxPooling2D layer* that follows every Conv2D layer is primarily to down sample the detection of features in feature maps. This means that even if colors of pixels are slightly different they should be pooled togehter into the same groups for images such as car tail lights.   
+  * The *MaxPooling2D layer* that follows every Conv2D layer is primarily to down sample the detection of features in feature maps. This means that even if colors of pixels are slightly different they should be pooled together into the same groups for images such as car tail lights.   
   * The *Dropout layer* is to help data from overfitting by dropping out roughly 20% of all output units from the layer.    
   * The *Flatten layer* is added to make certain that the tensor is reshaped to have a shape that is equal to the number of elements contained in tensor not including the batch dimension.   
-  * Finally the *Dense layer* is a fully connected layer that is made to connect the model and use the 'relu' activation function.   
-  * This entire model isn't tuned for high accuracy and is more of a general model made for image recognition and categorization. 
+  * Finally the *Dense layer* is a fully connected layer that is made to connect the Model and use the 'relu' activation function.   
+  * This Model isn't tuned for high accuracy but is instead a general Model made for image recognition and categorization. 
 
 ### Decision-making process and explanation of model choice
 > Neural Networks vs. Random Forest Classifier
 
-* Neural Networks are generally more popular in usage for image processing in machine learning model (MLM). The two major packages considered for this project were **TensorFlow** and **Pytorch**. Both packages are very succesful at running models on image classification. However, our decision to chose was to go with <a href="https://www.tensorflow.org/"> TensorFlow </a>. 
+* Neural Networks are generally more popular in usage for image processing in machine learning models (MLM). The two major packages considered for this project were **TensorFlow** and **Pytorch**. Both packages are very succesful at running models on image classification. However, the final decision was to go with <a href="https://www.tensorflow.org/"> TensorFlow </a>. 
 
 * Apart from being more familiar with TensorFlow from previous experience, this model has a few other features which influenced our decision over Pytorch:
   * Built-in API allowing developers to directly link a model to an already deployed website without outsourcing programs.
@@ -195,23 +195,20 @@ _Note_: Uploaded the images to each AWS Bucket using AWS's upload tool.
 <img src='images/DBTableExamples.png' width=45% height=30% />
 
 ### Dashboard
-> We will present our project in Tableau Dashboard for our final deliverable. 
-> We will create an application of our Vehicle Recognition Model
-  * Our application will allow a user to upload an image and choose a button to run the application
-  * The application will return if the image uploaded has a vehicle in the image or not.
-  * Our application will be hosted on Amazon Web Services, AWS.  
-  * We will be using Flask and Pickle to integrate the model into the application.
-> In addition to using a Flask template, we will also integrate D3.js for a fully functioning and interactive dashboard.  
+> We will present our project in Tableau Dashboard for our final deliverable.   
+> We will present our application prototype that we plan on completing in a future release.  
+> We will also integrate D3.js for a fully functioning and interactive dashboard.    
 
 ## Results
+___
+![ModelTestResults](https://user-images.githubusercontent.com/89947873/153783845-e61721b8-968a-49fa-a62f-b05af7f1659c.png)
 
 ## Summary
-> Recommendation for future analysis:
-Increased timeframe for working with the data and building and training the model.
+> Recommendation for future analysis:      
+Increased timeframe for working with the data in order to train and test the Model.  
 
+> Anything the team would have done differently:      
+Understood the complexity of the dataset we chose, in order to read the data from a file system and then present it to the Model.  
 
-> Anything the team would have done differently:
-TBD
-
-Thank you for your time for reading our project details, please let us know if you need any additional information.  
+Thank you for your time and reading our project details. Please let us know if you need any additional information.    
 Harsh Patel, Jill Hughes, Logan Murphy, Mihai Anghel
