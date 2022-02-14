@@ -215,7 +215,7 @@ The overall accuracy is low but the Model is functioning. Accuracy improvements 
 Increased timeframe for working with the data in order to train and test the Model.  
 
 > Anything the team would have done differently:      
-Understood the complexity of the dataset we chose, in order to read the data from a file system and then present it to the Model.  
+Understand the complexity of the dataset we chose, in order to read the data from a file system and then present it to the Model.  
 
 Thank you for your time and reading our project details. Please let us know if you need any additional information.    
 Harsh Patel, Jill Hughes, Logan Murphy, Mihai Anghel
