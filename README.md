@@ -99,7 +99,7 @@ _After Course Completion_
 * Created DataFrame **test** for definition of types of cars in testing dataset. 
 <img src='images/df_test2.png' width=40% height=35%/>
 
-**B)** Create AWS Buckets to hold images from both the cars-train and cars-test datasets
+**B)** Create AWS Buckets to hold images from both the cars-train and cars-test datasets  
 _Note_: Uploaded the images to each AWS Bucket using AWS's upload tool.
     
 <img src='images/Buckets2.png' width=70% height=35%/>   
@@ -140,6 +140,7 @@ _Note_: Uploaded the images to each AWS Bucket using AWS's upload tool.
 4) Once the Model is trained, we repeat the steps with our Testing data and determine our accuracy.
 
 **Our Model** uses multiple layers to make the model rescale the images and be able to identify them. 
+![vehicle/nonvehicle model](https://i.imgur.com/Cjxfk8V.png)
   * First the *images are rescaled* from 1 to 255 to 0 to 1 using a rescaling layer. This will allow the model to run faster by using smaller numbers instead of large numbers.   
   * The *Conv2D layer* creates a convolution kernel each time with the a size of the images being converted included in each layer.   
   * The *MaxPooling2D layer* that follows every Conv2D layer is primarily to down sample the detection of features in feature maps. This means that even if colors of pixels are slightly different they should be pooled togehter into the same groups for images such as car tail lights.   
@@ -195,23 +196,18 @@ _Note_: Uploaded the images to each AWS Bucket using AWS's upload tool.
 <img src='images/DBTableExamples.png' width=45% height=30% />
 
 ### Dashboard
-> We will present our project in Tableau Dashboard for our final deliverable. 
-> We will create an application of our Vehicle Recognition Model
-  * Our application will allow a user to upload an image and choose a button to run the application
-  * The application will return if the image uploaded has a vehicle in the image or not.
-  * Our application will be hosted on Amazon Web Services, AWS.  
-  * We will be using Flask and Pickle to integrate the model into the application.
-> In addition to using a Flask template, we will also integrate D3.js for a fully functioning and interactive dashboard.  
+> We will present our project in Tableau Dashboard for our final deliverable.   
+> We will present our application prototype that we plan on completing in a future release.  
+> We will also integrate D3.js for a fully functioning and interactive dashboard.    
 
 ## Results
 
 ## Summary
-> Recommendation for future analysis:
-Increased timeframe for working with the data and building and training the model.
+> Recommendation for future analysis:      
+Increased timeframe for working with the data in order to train and test the model.  
 
+> Anything the team would have done differently:      
+Understood the complexity of the dataset we chose, in order to read the data from a file system and then present it into the model.  
 
-> Anything the team would have done differently:
-TBD
-
-Thank you for your time for reading our project details, please let us know if you need any additional information.  
+Thank you for your time for reading our project details, please let us know if you need any additional information.    
 Harsh Patel, Jill Hughes, Logan Murphy, Mihai Anghel
