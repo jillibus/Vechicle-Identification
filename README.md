@@ -10,7 +10,7 @@
 
 ## GitHub Application
 <a href="https://jillibus.github.io/Vehicle-Identification">Vehicle Identification</a>
-test## General Information
+## General Information
 
 **Team Name:** 
 
