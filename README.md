@@ -42,6 +42,24 @@ The project outline can also be viewed in Tableau via this <a href="https://publ
 
 > The project topic was selected for its potential use in smart transportation applications that focus on the monitoring of traffic flow, automated parking systems, and security enforcement.  Adding physical characteristics, with existing systems that track traffic patterns that include type, velocity, direction and position, (Vehicular Ad Hoc Networks - VANETs), would advance the information provided for use in additional applications.
 
+### Initial Dataset
+
+Our initial dataset sourced from <a href="https://www.kaggle.com/"> Kaggle </a> was this <a href="https://www.kaggle.com/brsdincer/vehicle-detection-image-set"> Vehicle Detection Image Set </a>. 
+
+This dataset was used for our model and it had the binary purpose of determining if an image contained a vehicle or not.
+
+The vehicle images in the set specifically showed the rear part of cars, which allowed the model to easily be trained & recognize a vehcile after certain features - in this case the tail lights. 
+
+Here are a few examples of the images which this dataset contained:
+
+![3](https://user-images.githubusercontent.com/89520192/154288538-31c2227f-5198-45f9-964b-13833423dc5b.png) ![17](https://user-images.githubusercontent.com/89520192/154288565-0ceb7b99-1c59-4b33-9211-fb86d6e5ff22.png) ![2](https://user-images.githubusercontent.com/89520192/154288576-1b01cce4-bae0-4948-97af-971218aae7c9.png)
+
+The model produced good results as can be seen from the following Training and Validation graph:
+
+![slack-imgs](https://user-images.githubusercontent.com/89520192/154288794-a43ffcd1-4d28-4afc-afa0-74c800a0482b.png)
+
+With these results, our team was happy to push onto a more intricate dataset, using the <a href="https://ai.stanford.edu/~jkrause/cars/car_dataset.html"> Stanford </a> dataset for the remainder of our project as explained below.
+
 ### Source Data Chosen
 
 > The Cars dataset contains *16,185* images of *196* classes of cars. The data is split into *8,144* training images and *8,041* testing images, where each class has been split roughly in a 50-50 split. Classes are typically at the level of Make, Model, Year, e.g. **__2012 Tesla Model S__** or **__2012 BMW M3 coupe__**.
