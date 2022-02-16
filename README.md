@@ -235,28 +235,28 @@ The next section will summarize the reasons our model's accuracy for validation 
 
 ## Summary
 
-> Reasons for unfavorable results:
+**Reasons for unfavorable results:**
 
-As per the above results , our model didn't perform in-line with the initial dataset. The validation loss was much higher, and the model's accuracy was low. Overall, this outcome occured because our team did not consider the many differences in the datasets going into the process using the Stanford dataset.
+> As per the above results , our model didn't perform in-line with the initial dataset. The validation loss was much higher, and the model's accuracy was low. Overall, this outcome occured because our team did not consider the many differences in the datasets going into the process using the Stanford dataset.
 
-> Differences to consider:
+**Differences to consider:**
 
-The high complexity of training a neural network with image classification made it difficult for our model to adjust and perform accurately on the new datasat. 
+> The high complexity of training a neural network with image classification made it difficult for our model to adjust and perform accurately on the new datasat. 
 
-The Stanford datasat included over 16,000 images of cars split into 196 different classes. The files in this set were much larger in size, displayed cars from multiple points of view and had significantly visible differences in color, light spots and reflections. This made it much harder for our model to train and be able to perform as well as before with the previous dataset. Other factors which impaired our model were foreign objects/characteristics in the images from this subsequent dataset such as other cars, people and distance depth of images. 
+> The Stanford datasat included over 16,000 images of cars split into 196 different classes. The files in this set were much larger in size, displayed cars from multiple points of view and had significantly visible differences in color, light spots and reflections. This made it much harder for our model to train and be able to perform as well as before with the previous dataset. Other factors which impaired our model were foreign objects/characteristics in the images from this subsequent dataset such as other cars, people and distance depth of images. 
 
-The difference between a relatively small in size, well cropped image of the rear of a car showing tail-lights and a larger image file, with a zoomed out car next to a building with an abundance of color created hiccups in the model's ability to properly process and accurately provide desired results. 
+> The difference between a relatively small in size, well cropped image of the rear of a car showing tail-lights and a larger image file, with a zoomed out car next to a building with an abundance of color created hiccups in the model's ability to properly process and accurately provide desired results. 
 
-Moreover, the higher resolution of the images in the Stanford dataset required more processing power to convert into the model. With more pixels (and objects in the images) our model was not able to make ends meet. It found it difficult to train on a specific common denominator (which in the initial dataset was the tail-lights) in order to realize accurate results. Without being able to focus on a characteristic, the overload of data caused our model to not perform as how we expected to at the beginning of our journey in this project.
+> Moreover, the higher resolution of the images in the Stanford dataset required more processing power to convert into the model. With more pixels (and objects in the images) our model was not able to make ends meet. It found it difficult to train on a specific common denominator (which in the initial dataset was the tail-lights) in order to realize accurate results. Without being able to focus on a characteristic, the overload of data caused our model to not perform as how we expected to at the beginning of our journey in this project.
 
-> Recommendation for future analysis:
+**Recommendation for future analysis:**
       
 * Increased timeframe for working with the data in order to train and test the Model.  
 * Carefully consider detailed aspects of a dataset so that a model can be adjusted appropriately for the required implications.
 
-> Anything the team would have done differently:
+**Anything the team would have done differently:**
       
-Understand the complexity of the dataset we chose, in order to be able to confidently produce the accurate outcome we desired as our goal for the project. 
+> Understand the complexity of the dataset we chose, in order to be able to confidently produce the accurate outcome we desired as our goal for the project. 
 
 ## Final Word
 
