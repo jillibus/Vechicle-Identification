@@ -36,7 +36,7 @@
 
 #### Tableau Presentation
 
-The project outline can also be viewed in Tableau via this <a href="https://public.tableau.com/app/profile/logan.murphy/viz/Vehicle_Identification_Presentation_D4/VehicleIdentificationStory"> hyperlink </a>
+The project outline can also be viewed in Tableau via this <a href="https://public.tableau.com/app/profile/logan.murphy/viz/Vehicle_Identification_Presentation_V5/VehicleIdentificationStory?publish=yes"> hyperlink</a>.
 
 ### Business Applications for Vehicle Image Recognition
 
@@ -44,7 +44,7 @@ The project outline can also be viewed in Tableau via this <a href="https://publ
 
 ### Initial Dataset
 
-Our initial dataset sourced from <a href="https://www.kaggle.com/"> Kaggle </a> was this <a href="https://www.kaggle.com/brsdincer/vehicle-detection-image-set"> Vehicle Detection Image Set </a>. 
+Our initial dataset sourced from <a href="https://www.kaggle.com/"> Kaggle </a> was this <a href="https://www.kaggle.com/brsdincer/vehicle-detection-image-set"> Vehicle Detection Image Set</a>. 
 
 This dataset was used for our model and it had the binary purpose of determining if an image contained a vehicle or not.
 
@@ -58,7 +58,7 @@ The model produced good results as can be seen from the following Training and V
 
 ![slack-imgs](https://user-images.githubusercontent.com/89520192/154288794-a43ffcd1-4d28-4afc-afa0-74c800a0482b.png)
 
-With these results, our team was happy to push onto a more intricate dataset, using the <a href="https://ai.stanford.edu/~jkrause/cars/car_dataset.html"> Stanford </a> dataset for the remainder of our project as explained below.
+With these results, our team was happy to push onto a more intricate dataset, using the <a href="https://ai.stanford.edu/~jkrause/cars/car_dataset.html"> Stanford</a> dataset for the remainder of our project as explained below.
 
 ### Source Data Chosen
 
@@ -220,20 +220,48 @@ _Note_: Uploaded the images to each AWS Bucket using AWS's upload tool.
 
 ## Results
 ___
+
+The following screenshot shows successful output for the make, model and year of the vehicles and how many times they were identified once the model completed its run.
+
 ![ModelTestResults](https://user-images.githubusercontent.com/89947873/153783845-e61721b8-968a-49fa-a62f-b05af7f1659c.png)
 
-The results list the Make, Model and Year of the vehicle and how many times it was identified. 
+Below we have the overall training & validation accuracy, as well as the loss.
 
 ![image](https://user-images.githubusercontent.com/89947873/153802758-dafa300f-59a3-429c-95a5-5174b1389b40.png)
 
-The overall accuracy is low but the Model is functioning. Accuracy improvements in future iterations will be a definitive objective.
+It is clear that the overall accuracy is low but the Model is functioning. Our objective moving forward with this dataset (Stanford) is accuracy improvement.
+
+The next section will summarize the reasons our model's accuracy for validation was low and why the validation loss was so high.
 
 ## Summary
-> Recommendation for future analysis:      
-Increased timeframe for working with the data in order to train and test the Model.  
 
-> Anything the team would have done differently:      
-Understand the complexity of the dataset we chose, in order to read the data from a file system and then present it to the Model.  
+**Reasons for unfavorable results:**
 
-Thank you for your time and reading our project details. Please let us know if you need any additional information.    
-Harsh Patel, Jill Hughes, Logan Murphy, Mihai Anghel
+> As per the above results , our model didn't perform in-line with the initial dataset. The validation loss was much higher, and the model's accuracy was low. Overall, this outcome occured because our team did not consider the many differences in the datasets going into the process using the Stanford dataset.
+
+**Differences to consider:**
+
+> The high complexity of training a neural network with image classification made it difficult for our model to adjust and perform accurately on the new datasat. 
+
+> The Stanford datasat included over 16,000 images of cars split into 196 different classes. The files in this set were much larger in size, displayed cars from multiple points of view and had significantly visible differences in color, light spots and reflections. This made it much harder for our model to train and be able to perform as well as before with the previous dataset. Other factors which impaired our model were foreign objects/characteristics in the images from this subsequent dataset such as other cars, people and distance depth of images. 
+
+> The difference between a relatively small in size, well cropped image of the rear of a car showing tail-lights and a larger image file, with a zoomed out car next to a building with an abundance of color created hiccups in the model's ability to properly process and accurately provide desired results. 
+
+> Moreover, the higher resolution of the images in the Stanford dataset required more processing power to convert into the model. With more pixels (and objects in the images) our model was not able to make ends meet. It found it difficult to train on a specific common denominator (which in the initial dataset was the tail-lights) in order to realize accurate results. Without being able to focus on a characteristic, the overload of data caused our model to not perform as how we expected to at the beginning of our journey in this project.
+
+**Recommendation for future analysis:**
+      
+* Increased timeframe for working with the data in order to train and test the Model.  
+* Carefully consider detailed aspects of a dataset so that a model can be adjusted appropriately for the required implications.
+
+**Anything the team would have done differently:**
+      
+> Understand the complexity of the dataset we chose, in order to be able to confidently produce the accurate outcome we desired as our goal for the project. 
+
+## Final Word
+
+Although our final results were not what we expected using the Stanford dataset, we learned a lot throughout the lifetime of this project. We understand the implications which require consideration moving forward. This knowledge will be useful not only in the instance of this project, but for any future assignment in the field we embark on.
+
+Thank you for your time and reading our project details. Please let us know if you need any additional information.
+    
+#### _Harsh Patel, Jill Hughes, Logan Murphy, Mihai Anghel_
