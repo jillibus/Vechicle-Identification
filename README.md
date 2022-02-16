@@ -36,7 +36,7 @@
 
 #### Tableau Presentation
 
-The project outline can also be viewed in Tableau via this <a href="https://public.tableau.com/app/profile/logan.murphy/viz/Vehicle_Identification_Presentation_D4/VehicleIdentificationStory"> hyperlink </a>
+The project outline can also be viewed in Tableau via this <a href="https://public.tableau.com/app/profile/logan.murphy/viz/Vehicle_Identification_Presentation_V5/VehicleIdentificationStory?publish=yes"> hyperlink</a>.
 
 ### Business Applications for Vehicle Image Recognition
 
@@ -44,7 +44,7 @@ The project outline can also be viewed in Tableau via this <a href="https://publ
 
 ### Initial Dataset
 
-Our initial dataset sourced from <a href="https://www.kaggle.com/"> Kaggle </a> was this <a href="https://www.kaggle.com/brsdincer/vehicle-detection-image-set"> Vehicle Detection Image Set </a>. 
+Our initial dataset sourced from <a href="https://www.kaggle.com/"> Kaggle </a> was this <a href="https://www.kaggle.com/brsdincer/vehicle-detection-image-set"> Vehicle Detection Image Set</a>. 
 
 This dataset was used for our model and it had the binary purpose of determining if an image contained a vehicle or not.
 
@@ -58,7 +58,7 @@ The model produced good results as can be seen from the following Training and V
 
 ![slack-imgs](https://user-images.githubusercontent.com/89520192/154288794-a43ffcd1-4d28-4afc-afa0-74c800a0482b.png)
 
-With these results, our team was happy to push onto a more intricate dataset, using the <a href="https://ai.stanford.edu/~jkrause/cars/car_dataset.html"> Stanford </a> dataset for the remainder of our project as explained below.
+With these results, our team was happy to push onto a more intricate dataset, using the <a href="https://ai.stanford.edu/~jkrause/cars/car_dataset.html"> Stanford</a> dataset for the remainder of our project as explained below.
 
 ### Source Data Chosen
 
