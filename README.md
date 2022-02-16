@@ -241,9 +241,9 @@ The next section will summarize the reasons our model's accuracy for validation 
 
 **Differences to consider:**
 
-> The high complexity of training a neural network with image classification made it difficult for our model to adjust and perform accurately on the new datasat. 
+> The high complexity of training a neural network with image classification made it difficult for our model to adjust and perform accurately on the new dataset. 
 
-> The Stanford datasat included over 16,000 images of cars split into 196 different classes. The files in this set were much larger in size, displayed cars from multiple points of view and had significantly visible differences in color, light spots and reflections. This made it much harder for our model to train and be able to perform as well as before with the previous dataset. Other factors which impaired our model were foreign objects/characteristics in the images from this subsequent dataset such as other cars, people and distance depth of images. 
+> The Stanford dataset included over 16,000 images of cars split into 196 different classes. The files in this set were much larger in size, displayed cars from multiple points of view and had significantly visible differences in color, light spots and reflections. This made it much harder for our model to train and be able to perform as well as before with the previous dataset. Other factors which impaired our model were foreign objects/characteristics in the images from this subsequent dataset such as other cars, people and distance depth of images. 
 
 > The difference between a relatively small in size, well cropped image of the rear of a car showing tail-lights and a larger image file, with a zoomed out car next to a building with an abundance of color created hiccups in the model's ability to properly process and accurately provide desired results. 
 
